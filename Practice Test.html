@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEH Practice Test</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .question {
+        margin-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .choices {
+        margin-left: 20px;
+      }
+      .wrong {
+        background-color: red;
+      }
+      .correct {
+        background-color: green;
+      }
+      .navigation {
+        margin-top: 20px;
+      }
+      .dashboard {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      .dashboard div {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .dashboard .current {
+        background-color: yellow;
+      }
+      .dashboard .answered {
+        background-color: lightgreen;
+      }
+      .dashboard .unanswered {
+        background-color: lightcoral;
+      }
+      .summary {
+        margin-top: 30px;
+        font-weight: bold;
+      }
+      #dashboard-container {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CEH Practice Test</h1>
+
+    <input type="file" id="upload" accept=".xlsx" onchange="loadExcel()" />
+
+    <button id="toggle-dashboard-btn" onclick="toggleDashboard()">
+      Hide Dashboard
+    </button>
+
+    <div id="dashboard-container">
+      <div id="dashboard" class="dashboard"></div>
+    </div>
+
+    <div id="quiz-container"></div>
+
+    <div class="navigation">
+      <button id="prev-btn" onclick="prevPage()" disabled>Previous</button>
+      <button id="next-btn" onclick="nextPage()" disabled>Next</button>
+      <button id="submit-btn" style="display: none" onclick="submitQuiz()">
+        Submit
+      </button>
+      <button id="answer-btn" style="display: inline" onclick="showAnswer()">
+        Answer
+      </button>
+    </div>
+
+    <div id="summary" class="summary"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script>
+      let questions = [];
+      let currentPage = 0;
+      let answers = [];
+      let dashboardVisible = true; // Track the visibility of the dashboard
+
+      // Load Excel file and convert it to JSON
+      function loadExcel() {
+        const file = document.getElementById("upload").files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          const data = new Uint8Array(e.target.result);
+          const workbook = XLSX.read(data, { type: "array" });
+          const sheetName = workbook.SheetNames[0];
+          const sheet = workbook.Sheets[sheetName];
+
+          // Convert sheet to JSON
+          const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+          // Map the JSON data to questions array
+          questions = json.slice(1).map((row) => ({
+            text: row[1], // Question text (Column B)
+            choices: {
+              A: row[2], // Choice A (Column C)
+              B: row[3], // Choice B (Column D)
+              C: row[4], // Choice C (Column E)
+              D: row[5], // Choice D (Column F)
+            },
+            correct: row[6], // Correct answer (Column G)
+          }));
+
+          // Shuffle the questions randomly
+          shuffleQuestions(questions);
+
+          loadQuestion(currentPage); // Load the first question
+          updateDashboard(); // Initialize dashboard
+        };
+
+        reader.readAsArrayBuffer(file);
+      }
+
+      // Fisher-Yates (Knuth) Shuffle Algorithm
+      function shuffleQuestions(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+        }
+      }
+
+      // Load question by page
+      function loadQuestion(page) {
+        if (!questions.length) return;
+
+        const question = questions[page];
+        const container = document.getElementById("quiz-container");
+        container.innerHTML = "";
+
+        const questionElem = document.createElement("div");
+        questionElem.className = "question";
+        questionElem.innerHTML = `<p>${page + 1}. ${question.text}</p>`;
+        const choicesElem = document.createElement("div");
+        choicesElem.className = "choices";
+
+        for (const [key, value] of Object.entries(question.choices)) {
+          const choiceElem = document.createElement("div");
+          choiceElem.innerHTML = `
+                <input type="radio" name="question${page}" value="${key}" 
+                       onchange="selectAnswer(${page}, '${key}', this)"
+                       ${answers[page] === key ? "checked" : ""}>
+                ${key}: ${value}
+            `;
+          choicesElem.appendChild(choiceElem);
+        }
+
+        questionElem.appendChild(choicesElem);
+        container.appendChild(questionElem);
+
+        document.getElementById("next-btn").disabled = true;
+        document.getElementById("prev-btn").disabled = page === 0;
+
+        if (page === questions.length - 1) {
+          document.getElementById("next-btn").style.display = "none";
+          document.getElementById("submit-btn").style.display = "inline";
+        } else {
+          document.getElementById("next-btn").style.display = "inline";
+          document.getElementById("submit-btn").style.display = "none";
+        }
+
+        updateDashboard();
+      }
+
+      // Handle answer selection
+      function selectAnswer(questionIndex, answer, element) {
+        const question = questions[questionIndex];
+        answers[questionIndex] = answer;
+
+        const choiceElements =
+          element.parentElement.parentElement.querySelectorAll("div");
+        choiceElements.forEach((choice) => {
+          choice.classList.remove("correct", "wrong");
+        });
+
+        if (answer === question.correct) {
+          document.getElementById("next-btn").disabled = false;
+        } else {
+          document.getElementById("next-btn").disabled = true;
+        }
+
+        updateDashboard();
+      }
+
+      // Show correct answer when "Answer" button is clicked
+      function showAnswer() {
+        const question = questions[currentPage];
+        const choiceElements = document.querySelectorAll(
+          `input[name="question${currentPage}"]`
+        );
+        choiceElements.forEach((choiceElem) => {
+          const choiceParent = choiceElem.parentElement;
+          const labelText = choiceParent.textContent.trim();
+          const answerText = `${question.correct}: ${
+            question.choices[question.correct]
+          }`;
+          choiceParent.classList.remove("correct", "wrong");
+          if (labelText.startsWith(question.correct)) {
+            choiceParent.classList.add("correct");
+          }
+        });
+      }
+
+      function nextPage() {
+        if (currentPage < questions.length - 1) {
+          currentPage++;
+          loadQuestion(currentPage);
+        }
+      }
+
+      function prevPage() {
+        if (currentPage > 0) {
+          currentPage--;
+          loadQuestion(currentPage);
+        }
+      }
+
+      function updateDashboard() {
+        const dashboard = document.getElementById("dashboard");
+        dashboard.innerHTML = "";
+
+        for (let i = 0; i < questions.length; i++) {
+          const status = answers[i] ? "answered" : "unanswered";
+          const currentClass = i === currentPage ? "current" : "";
+          const questionBlock = document.createElement("div");
+
+          questionBlock.className = `${status} ${currentClass}`;
+          questionBlock.innerText = i + 1;
+          questionBlock.onclick = () => {
+            currentPage = i;
+            loadQuestion(currentPage);
+          };
+
+          dashboard.appendChild(questionBlock);
+        }
+      }
+
+      function toggleDashboard() {
+        const dashboardContainer = document.getElementById(
+          "dashboard-container"
+        );
+        const toggleButton = document.getElementById("toggle-dashboard-btn");
+
+        if (dashboardVisible) {
+          dashboardContainer.style.display = "none";
+          toggleButton.innerText = "Show Dashboard";
+        } else {
+          dashboardContainer.style.display = "block";
+          toggleButton.innerText = "Hide Dashboard";
+        }
+
+        dashboardVisible = !dashboardVisible;
+      }
+
+      function submitQuiz() {
+        let score = 0;
+        for (let i = 0; i < questions.length; i++) {
+          if (answers[i] === questions[i].correct) {
+            score++;
+          }
+        }
+        document.getElementById(
+          "summary"
+        ).innerText = `You scored ${score} out of ${questions.length}`;
+      }
+    </script>
+  </body>
+</html>
