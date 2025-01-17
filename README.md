@@ -23,8 +23,11 @@ This is a simple Practice Test built using ChatGPT haha. It allows users to uplo
 
 ```bash
 git clone https://github.com/salmonbara/Practice-Test
+```
+### 2. Open the project
+Open practiceTest.html in a web browser.
 
-### 2. Upload Your Excel File
+### 3. Upload Your Excel File
 - Click on the "Choose File" button to upload an Excel file containing questions.
 - The Excel file must have the following structure:
     - Column 1: Number of question
@@ -35,7 +38,7 @@ git clone https://github.com/salmonbara/Practice-Test
     - Column 6: Option D
     - Column 7: Correct Answer (A, B, C, or D)
 
-### 3. Select Quiz Mode
+### 4. Select Quiz Mode
 After uploading the file, choose one of the following modes:
 
 #### **Practice Mode**
@@ -50,16 +53,16 @@ In this mode, you can customize the quiz by specifying the number of questions, 
 - Set the time limit for the quiz in minutes.
 - Set the passing score percentage.
 
-### 4. Start the Quiz
+### 5. Start the Quiz
 - Once you choose a mode (and, in the case of Custom Mode, set the parameters), click "Start!" to begin the quiz.
 - The quiz will load, and you can navigate through the questions using "Next" and "Previous" buttons.
 - If you choose the Practice Mode, the correct answers will be highlighted.
 
-### 5. Submit and Review
+### 6. Submit and Review
 - After completing the quiz, click "Submit" to get your score.
 - If you didn't pass, you can review the incorrect answers.
 
-### 6. Reset
+### 7. Reset
 - You can reset the quiz anytime using the "Reset" button.
 
 ## Files
