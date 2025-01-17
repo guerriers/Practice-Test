@@ -73,4 +73,3 @@ This project consists of the following files:
 
 ## License
 This project is open-source and available under the MIT License.
-```
