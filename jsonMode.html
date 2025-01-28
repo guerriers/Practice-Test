@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Test</title>
+    <link rel="stylesheet" href="practiceTest.css" />
+  </head>
+  <body>
+    <h1>Practice Test (.json)</h1>
+    <!-- <img src="./CySA+ Exam/images/question17.png" alt="test img" /> -->
+
+    <!-- File Import Section (Visible first) -->
+    <div id="file-import-section">
+      <input type="file" id="upload" accept=".json" onchange="loadJSON()" />
+      <!-- Add the CySA+ button here -->
+      <button id="cysa-button" onclick="loadCySA()">CySA+</button>
+    </div>
+
+    <!-- Mode Selection Section (Hidden initially) -->
+    <div id="mode-select" style="display: none">
+      <button onclick="selectMode('Practice')">Practice Mode</button>
+      <button onclick="selectMode('Test')">Test Mode</button>
+      <button onclick="selectMode('Custom')">Custom Mode</button>
+    </div>
+
+    <!-- Custom Mode Settings -->
+    <div id="custom-settings" style="display: none">
+      <label for="num-questions">Number of Questions:</label>
+      <input type="number" id="num-questions" min="1" max="150" value="50" />
+      <br />
+      <label for="timer">Time Limit (Minutes):</label>
+      <input type="number" id="timer" min="1" value="50" />
+      <br />
+      <label for="pass-score">Passing Score (%):</label>
+      <input type="number" id="pass-score" min="50" max="100" value="90" />
+      <br />
+      <!-- Shuffle Ans Radio -->
+      <label for="shuffle">Shuffle Answer:</label><br />
+      <input type="radio" id="shuffle-yes" name="shuffle" value="yes" />
+      Yes
+      <input type="radio" id="shuffle-no" name="shuffle" value="no" checked />
+      No
+      <br />
+      <button id="start-btn" onclick="startCustomQuiz()">Start!</button>
+    </div>
+
+    <!-- Dashboard and Quiz Container -->
+    <div id="dashboard-container" style="display: none">
+      <div id="dashboard" class="dashboard"></div>
+    </div>
+
+    <!-- Toggle Dashboard Button -->
+    <button
+      id="toggle-dashboard-btn"
+      onclick="toggleDashboard()"
+      style="display: none"
+    >
+      Dashboard
+    </button>
+
+    <div id="quiz-container"></div>
+
+    <!-- Navigation Buttons -->
+    <div class="navigation" style="display: none" id="navigation-buttons">
+      <button id="prev-btn" onclick="prevPage()" disabled>Previous</button>
+      <button id="next-btn" onclick="nextPage()">Next</button>
+      <button id="submit-btn" style="display: none" onclick="submitQuiz()">
+        Submit
+      </button>
+    </div>
+
+    <button id="reset-btn" style="display: none" onclick="resetQuiz()">
+      Reset
+    </button>
+
+    <!-- Summary and Review -->
+    <div id="summary" class="summary"></div>
+    <div id="review-container" style="display: none">
+      <button onclick="showReview()">Review Incorrect Answers</button>
+      <div id="review"></div>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div id="countdown-timer" style="display: none">
+      <p>Time Left: <span id="timer-display">00:00:00</span></p>
+    </div>
+
+    <!-- Main Script -->
+    <script>
+      let questions = [];
+      let currentPage = 0;
+      let answers = [];
+      let selectedMode = "";
+      let isJSONLoaded = false;
+      let countdown;
+      let timerTime;
+
+      function loadJSON() {
+        const file = document.getElementById("upload").files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          const jsonData = JSON.parse(e.target.result);
+
+          console.log("Loaded JSON Data:", jsonData);
+
+          questions = jsonData.map((item) => ({
+            text: item.question.text,
+            choices: item.choices.reduce((acc, choice) => {
+              acc[choice.id] = choice.text;
+              return acc;
+            }, {}),
+            correct: item.answer,
+          }));
+
+          // After the file is loaded, show the mode selection buttons
+          document.getElementById("mode-select").style.display = "block";
+          document.getElementById("file-import-section").style.display = "none"; // Hide the file import section
+          isJSONLoaded = true;
+        };
+
+        reader.readAsText(file);
+      }
+
+      function selectMode(mode) {
+        if (!isJSONLoaded) {
+          alert("Please Import JSON before selecting a mode.");
+          return;
+        }
+
+        selectedMode = mode;
+        document.getElementById("mode-select").style.display = "none";
+
+        if (selectedMode === "Custom") {
+          document.getElementById("custom-settings").style.display = "block";
+        } else if (selectedMode === "Test") {
+          shuffleArray(questions); // Only shuffle if "shuffle Question" is "Yes"
+          document.getElementById("reset-btn").style.display = "block";
+          document.getElementById("toggle-dashboard-btn").style.display =
+            "block";
+          startQuiz();
+        } else {
+          document.getElementById("reset-btn").style.display = "block";
+          document.getElementById("toggle-dashboard-btn").style.display =
+            "block";
+          startQuiz();
+        }
+      }
+
+      function startCustomQuiz() {
+        const numQuestions = parseInt(
+          document.getElementById("num-questions").value
+        );
+        const timeLimit = parseInt(document.getElementById("timer").value);
+        const passScore = parseInt(document.getElementById("pass-score").value);
+        const shuffleAns = document.querySelector(
+          'input[name="shuffle"]:checked'
+        )?.value;
+
+        console.log("Shuffle Answer:", shuffleAns); // Debug log
+
+        // Shuffle the entire list of questions
+        const shuffledQuestions = shuffleArray([...questions]);
+
+        // Select the first `numQuestions` questions from the shuffled list
+        let selectedQuestions = shuffledQuestions.slice(0, numQuestions);
+
+        // Update the global questions array
+        questions = selectedQuestions;
+
+        // Apply Shuffle Answer logic only if explicitly set to "Yes"
+        if (shuffleAns === "yes" && isJSONLoaded) {
+          console.log("Shuffling answers..."); // Debug log
+          questions.forEach((question) => {
+            // Shuffle answer choices
+            const choices = Object.entries(question.choices).map(
+              ([key, text]) => ({
+                key,
+                text,
+              })
+            );
+            shuffleArray(choices);
+
+            const newChoices = {};
+            let correctKey = null;
+
+            // Reassign keys (A, B, C, etc.) to shuffled choices
+            choices.forEach((choice, index) => {
+              const newKey = String.fromCharCode(65 + index); // A, B, C, etc.
+              newChoices[newKey] = choice.text;
+
+              // Update the correct answer key if it matches the original correct key
+              if (choice.key === question.correct) {
+                correctKey = newKey;
+              }
+            });
+
+            // Update the question with shuffled choices and correct key
+            question.choices = newChoices;
+            question.correct = correctKey;
+
+            console.log("Updated Question:", question); // Debug log
+          });
+
+          // Reset the answers array to match the new shuffled structure
+          answers = new Array(questions.length).fill(null);
+        }
+
+        // Hide settings and start quiz
+        document.getElementById("custom-settings").style.display = "none";
+        document.getElementById("countdown-timer").style.display = "block";
+
+        // Start the countdown timer
+        timerTime = timeLimit * 60; // Convert minutes to seconds
+        countdown = setInterval(updateTimer, 1000);
+
+        // Show Dashboard and Reset buttons
+        document.getElementById("reset-btn").style.display = "block";
+        document.getElementById("toggle-dashboard-btn").style.display = "block";
+        startQuiz();
+      }
+
+      function shuffleArray(array) {
+        console.log("Shuffling array:", array);
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      function updateTimer() {
+        const minutes = Math.floor(timerTime / 60);
+        const seconds = timerTime % 60;
+
+        document.getElementById("timer-display").innerText = `00:${String(
+          minutes
+        ).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+        if (timerTime <= 0) {
+          clearInterval(countdown);
+          submitQuiz();
+        } else {
+          timerTime--;
+        }
+      }
+
+      function startQuiz() {
+        loadQuestion(currentPage);
+        updateDashboard();
+        // Show the navigation buttons
+        document.getElementById("navigation-buttons").style.display = "block";
+      }
+
+      function resetQuiz() {
+        localStorage.removeItem("quizProgress");
+        location.reload();
+      }
+
+      function loadQuestion(page) {
+        if (!questions.length) return;
+
+        const question = questions[page];
+        const container = document.getElementById("quiz-container");
+        container.innerHTML = "";
+
+        // Replace \n with <br> in the question text
+        const formattedText = question.text.replace(/\n/g, "<br>");
+
+        const questionElem = document.createElement("div");
+        questionElem.className = "question";
+        questionElem.innerHTML = `<p>${page + 1}. ${formattedText}</p>`;
+
+        // Debug: Log the question object
+        console.log("Current Question:", question);
+
+        // Check if the question has an image
+        if (question.image) {
+          const imgElem = document.createElement("img");
+          imgElem.src = question.image;
+          imgElem.alt = `Question ${page + 1} Image`;
+          imgElem.onerror = () => {
+            console.error(`Image failed to load: ${question.image}`);
+            imgElem.remove();
+          };
+          questionElem.appendChild(imgElem);
+          console.log("Image appended:", question.image);
+        } else {
+          console.log("No image for this question.");
+        }
+
+        // Add footer text if it exists
+        if (question.footer) {
+          const footerElem = document.createElement("p");
+          footerElem.className = "footer";
+          footerElem.innerText = question.footer;
+          questionElem.appendChild(footerElem);
+          console.log("Footer appended:", question.footer);
+        } else {
+          console.log("No footer for this question.");
+        }
+
+        const choicesElem = document.createElement("div");
+        choicesElem.className = "choices";
+
+        // Determine if the question has multiple correct answers
+        const isMultipleAnswer = question.correct.includes(",");
+
+        // Loop through choices and display them
+        for (const [key, value] of Object.entries(question.choices)) {
+          const formattedChoiceText = value.replace(/\n/g, "<br>");
+
+          const choiceElem = document.createElement("div");
+          choiceElem.innerHTML = `
+      <input type="${isMultipleAnswer ? "checkbox" : "radio"}" 
+             name="question${page}" 
+             value="${key}" 
+             onchange="selectAnswer(${page}, '${key}', ${isMultipleAnswer})"
+             ${answers[page] && answers[page].includes(key) ? "checked" : ""}>
+      ${key}: ${formattedChoiceText}
+    `;
+          choicesElem.appendChild(choiceElem);
+        }
+
+        questionElem.appendChild(choicesElem);
+        container.appendChild(questionElem);
+
+        // Disable/enable navigation buttons based on conditions
+        document.getElementById("prev-btn").disabled = page === 0;
+        document.getElementById("next-btn").style.display =
+          page === questions.length - 1 ? "none" : "inline";
+        document.getElementById("submit-btn").style.display =
+          page === questions.length - 1 ? "inline" : "none";
+
+        // Handle Practice Mode: highlight correct answer
+        if (selectedMode === "Practice") {
+          highlightCorrectAnswer(page);
+        }
+      }
+
+      function selectAnswer(questionIndex, answer, isMultipleAnswer) {
+        if (!answers[questionIndex]) {
+          answers[questionIndex] = [];
+        }
+
+        if (isMultipleAnswer) {
+          // Toggle the answer in the array
+          if (answers[questionIndex].includes(answer)) {
+            answers[questionIndex] = answers[questionIndex].filter(
+              (a) => a !== answer
+            );
+          } else {
+            answers[questionIndex].push(answer);
+          }
+        } else {
+          // For single-answer questions, replace the answer
+          answers[questionIndex] = [answer];
+        }
+
+        updateDashboard();
+
+        if (selectedMode === "Practice") {
+          highlightCorrectAnswer(questionIndex);
+        }
+      }
+
+      function highlightCorrectAnswer(questionIndex) {
+        const question = questions[questionIndex];
+        const choicesElems = document.getElementsByName(
+          `question${questionIndex}`
+        );
+
+        const correctAnswers = question.correct.split(",");
+
+        choicesElems.forEach((choiceElem) => {
+          const choiceValue = choiceElem.value;
+          const parentElem = choiceElem.parentElement;
+
+          // Remove any previous styles
+          parentElem.classList.remove("correct", "incorrect");
+
+          // Apply correct or incorrect class
+          if (correctAnswers.includes(choiceValue)) {
+            parentElem.classList.add("correct");
+          } else if (
+            answers[questionIndex] &&
+            answers[questionIndex].includes(choiceValue)
+          ) {
+            parentElem.classList.add("incorrect");
+          }
+        });
+      }
+
+      function nextPage() {
+        if (currentPage < questions.length - 1) {
+          currentPage++;
+          loadQuestion(currentPage);
+        }
+      }
+
+      function prevPage() {
+        if (currentPage > 0) {
+          currentPage--;
+          loadQuestion(currentPage);
+        }
+      }
+
+      function submitQuiz() {
+        console.log("Submit button clicked"); // Debug log
+        clearInterval(countdown); // Stop the countdown when the quiz is submitted
+        let score = 0;
+        const incorrectAnswers = [];
+
+        console.log("Submitting quiz..."); // Debug log
+        console.log("Answers:", answers); // Debug log
+
+        questions.forEach((question, index) => {
+          const correctAnswers = question.correct.split(",");
+          const userAnswers = answers[index] || [];
+
+          console.log(`Question ${index + 1}:`); // Debug log
+          console.log("Correct Answers:", correctAnswers); // Debug log
+          console.log("User Answers:", userAnswers); // Debug log
+
+          // Check if all correct answers are selected and no incorrect answers are selected
+          const isCorrect =
+            correctAnswers.every((ans) => userAnswers.includes(ans)) &&
+            userAnswers.every((ans) => correctAnswers.includes(ans));
+
+          if (isCorrect) {
+            score++;
+          } else {
+            incorrectAnswers.push(index);
+          }
+        });
+
+        console.log("Final Score:", score); // Debug log
+        console.log("Incorrect Answers:", incorrectAnswers); // Debug log
+
+        const resultText =
+          score / questions.length >=
+          parseInt(document.getElementById("pass-score").value) / 100
+            ? "Passed! :)"
+            : "Failed! :(";
+        const resultElement = document.getElementById("summary");
+        resultElement.innerText = `You scored ${score} / ${questions.length}. Result: ${resultText}`;
+
+        // Apply styles based on result
+        if (resultText === "Passed! :)") {
+          resultElement.style.color = "green";
+        } else {
+          resultElement.style.color = "red";
+        }
+
+        if (resultText === "Failed! :(") {
+          document.getElementById("review-container").style.display = "block";
+          document.getElementById("review").dataset.incorrectAnswers =
+            JSON.stringify(incorrectAnswers);
+        }
+      }
+
+      function showReview() {
+        const incorrectAnswers = JSON.parse(
+          document.getElementById("review").dataset.incorrectAnswers || "[]"
+        );
+        const reviewContainer = document.getElementById("review");
+        reviewContainer.innerHTML = "<h3>Incorrect Answers</h3>";
+
+        incorrectAnswers.forEach((index) => {
+          const question = questions[index];
+          const questionElem = document.createElement("div");
+          questionElem.className = "question";
+          questionElem.innerHTML = `<p>${index + 1}. ${question.text}</p>`;
+
+          const choicesElem = document.createElement("div");
+          choicesElem.className = "choices";
+
+          for (const [key, value] of Object.entries(question.choices)) {
+            const choiceElem = document.createElement("div");
+            choiceElem.innerHTML = `${key}: ${value}`;
+            if (question.correct.split(",").includes(key)) {
+              choiceElem.className = "correct";
+            } else if (answers[index] && answers[index].includes(key)) {
+              choiceElem.className = "incorrect";
+            }
+            choicesElem.appendChild(choiceElem);
+          }
+
+          questionElem.appendChild(choicesElem);
+          reviewContainer.appendChild(questionElem);
+        });
+      }
+
+      function toggleDashboard() {
+        const dashboard = document.getElementById("dashboard-container");
+        if (dashboard.style.display === "none") {
+          dashboard.style.display = "block";
+        } else {
+          dashboard.style.display = "none";
+        }
+      }
+
+      function updateDashboard() {
+        const dashboard = document.getElementById("dashboard");
+        dashboard.innerHTML = "";
+
+        questions.forEach((_, index) => {
+          const status = answers[index] ? "answered" : "unanswered";
+          const currentClass = index === currentPage ? "current" : "";
+          const questionBlock = document.createElement("div");
+
+          // Apply the 'answered' or 'unanswered' class
+          questionBlock.className = `${status} ${currentClass}`;
+          questionBlock.innerText = index + 1;
+
+          // Add click event to jump to the clicked question
+          questionBlock.onclick = () => {
+            currentPage = index;
+            loadQuestion(currentPage);
+            updateDashboard();
+          };
+
+          // Append the question block to the dashboard
+          dashboard.appendChild(questionBlock);
+        });
+      }
+
+      // Add this function to your existing script
+      function loadCySA() {
+        // Simulate a file input event for "CySA+ exam.json"
+        fetch("./CySA+ Exam/CySA+ exam.json") // Replace with the correct path to your JSON file
+          .then((response) => response.json())
+          .then((jsonData) => {
+            // Simulate the file input and trigger loadJSON
+            const file = new File(
+              [JSON.stringify(jsonData)],
+              "CySA+ exam.json",
+              { type: "application/json" }
+            );
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(file);
+            document.getElementById("upload").files = dataTransfer.files;
+
+            // Trigger the loadJSON function
+            loadJSON();
+          })
+          .catch((error) => {
+            console.error("Error loading CySA+ exam.json:", error);
+            alert(
+              "Failed to load CySA+ exam.json file. Please check the file path."
+            );
+          });
+      }
+
+      function shuffleQuestions(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+    </script>
+  </body>
+</html>

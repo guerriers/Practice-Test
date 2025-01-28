@@ -1,23 +1,27 @@
-
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
 }
+
 .question {
   margin-bottom: 15px;
   padding-left: 30px;
   padding-right: 30px;
 }
+
 .choices {
   margin-left: 20px;
 }
+
 .wrong {
   color: red;
 }
+
 .correct {
   color: rgb(7, 186, 7);
   font-weight: bold;
 }
+
 /* .correct-highlight {
   color: rgb(7, 186, 7);
   font-weight: bold;
@@ -25,6 +29,7 @@ body {
 .navigation {
   margin-top: 20px;
 }
+
 .dashboard {
   display: flex;
   flex-wrap: wrap;
@@ -32,6 +37,7 @@ body {
   padding: 10px;
   border: 1px solid #ccc;
 }
+
 .dashboard div {
   width: 30px;
   height: 30px;
@@ -43,12 +49,15 @@ body {
   cursor: pointer;
   border-radius: 6px;
 }
+
 .dashboard .answered {
   background-color: lightgreen;
 }
+
 .dashboard .unanswered {
   background-color: lightcoral;
 }
+
 .dashboard div.current {
   background-color: #3c8aff;
   font-weight: bold;
@@ -58,23 +67,29 @@ body {
   cursor: pointer;
   background-color: #ddf5ff;
 }
+
 .hidden-dashboard {
   display: none !important;
 }
+
 .summary {
   margin-top: 30px;
   font-weight: bold;
 }
+
 #dashboard-container {
   margin-top: 10px;
 }
+
 #mode-select {
   margin-top: 20px;
 }
+
 #review-container {
   margin-top: 20px;
   display: none;
 }
+
 #reset-btn {
   position: fixed;
   margin-top: 20px;
@@ -85,26 +100,32 @@ body {
   border-radius: 3px;
   background-color: rgb(209, 209, 209);
 }
-#reset-btn:hover{
-      cursor: pointer;
-      background-color: #033dea;
-      color: #ddd;
+
+#reset-btn:hover {
+  cursor: pointer;
+  background-color: #033dea;
+  color: #ddd;
 }
-#next-btn:hover{
+
+#next-btn:hover {
   cursor: pointer;
   background-color: rgb(186, 252, 201);
 }
-#submit-btn:hover{
+
+#submit-btn:hover {
   cursor: pointer;
   background-color: rgb(255, 196, 58);
 }
-#prev-btn:hover{
+
+#prev-btn:hover {
   cursor: pointer;
   background-color: rgb(186, 252, 201);
 }
+
 #toggle-dashboard-btn {
   margin-top: 20px;
 }
+
 #countdown-timer {
   position: fixed;
   top: 10px;
@@ -117,6 +138,7 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
+
 #start-btn {
   background-color: #4CAF50;
   color: white;
@@ -131,15 +153,19 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-#num-questions{
+
+#num-questions {
   margin-bottom: 6px;
 }
+
 #timer {
   margin-bottom: 6px;
 }
+
 #pass-score {
   margin-bottom: 6px;
 }
+
 #start-btn:hover {
   background-color: #45a049;
 }
@@ -152,4 +178,11 @@ start-btn:focus {
 #start-btn:active {
   background-color: #3e8e41;
   transform: scale(0.98);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
 }
