@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>Practice Test (.json)</h1>
-    <!-- <img src="./CySA+ Exam/images/question17.png" alt="test img" /> -->
+    <!-- <img src="./CySA+/images/question17.png" alt="test img" /> -->
 
     <!-- File Import Section (Visible first) -->
     <div id="file-import-section">
@@ -107,6 +107,8 @@
 
           questions = jsonData.map((item) => ({
             text: item.question.text,
+            image: item.question.imageQ, // Include the imageQ field
+            footer: item.question.footer, // Include the footer field
             choices: item.choices.reduce((acc, choice) => {
               acc[choice.id] = choice.text;
               return acc;
@@ -276,16 +278,16 @@
         console.log("Current Question:", question);
 
         // Check if the question has an image
-        if (question.image) {
+        if (question.imageQ) {
           const imgElem = document.createElement("img");
-          imgElem.src = question.image;
+          imgElem.src = question.imageQ; // Ensure this is the correct path
           imgElem.alt = `Question ${page + 1} Image`;
           imgElem.onerror = () => {
-            console.error(`Image failed to load: ${question.image}`);
-            imgElem.remove();
+            console.error(`Image failed to load: ${question.imageQ}`);
+            imgElem.remove(); // Remove the image element if it fails to load
           };
           questionElem.appendChild(imgElem);
-          console.log("Image appended:", question.image);
+          console.log("Image appended:", question.imageQ);
         } else {
           console.log("No image for this question.");
         }
@@ -471,7 +473,19 @@
           const question = questions[index];
           const questionElem = document.createElement("div");
           questionElem.className = "question";
-          questionElem.innerHTML = `<p>${index + 1}. ${question.text}</p>`;
+
+          // Replace \n with <br> in the question text
+          const formattedText = question.text.replace(/\n/g, "<br>");
+
+          questionElem.innerHTML = `<p>${index + 1}. ${formattedText}</p>`;
+
+          // Add footer text if it exists
+          if (question.footer) {
+            const footerElem = document.createElement("p");
+            footerElem.className = "footer";
+            footerElem.innerText = question.footer;
+            questionElem.appendChild(footerElem);
+          }
 
           const choicesElem = document.createElement("div");
           choicesElem.className = "choices";
@@ -528,16 +542,14 @@
 
       // Add this function to your existing script
       function loadCySA() {
-        // Simulate a file input event for "CySA+ exam.json"
-        fetch("./CySA+ Exam/CySA+ exam.json") // Replace with the correct path to your JSON file
+        // Simulate a file input event for "CySA+.json"
+        fetch("./CySA+/CySA+.json") // Replace with the correct path to your JSON file
           .then((response) => response.json())
           .then((jsonData) => {
             // Simulate the file input and trigger loadJSON
-            const file = new File(
-              [JSON.stringify(jsonData)],
-              "CySA+ exam.json",
-              { type: "application/json" }
-            );
+            const file = new File([JSON.stringify(jsonData)], "CySA+.json", {
+              type: "application/json",
+            });
             const dataTransfer = new DataTransfer();
             dataTransfer.items.add(file);
             document.getElementById("upload").files = dataTransfer.files;
@@ -546,9 +558,9 @@
             loadJSON();
           })
           .catch((error) => {
-            console.error("Error loading CySA+ exam.json:", error);
+            console.error("Error loading CySA+.json:", error);
             alert(
-              "Failed to load CySA+ exam.json file. Please check the file path."
+              "Failed to load CySA+.json file. Please check the file path."
             );
           });
       }

