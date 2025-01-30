@@ -2,7 +2,15 @@ body {
   font-family: Arial, sans-serif;
   margin: 20px;
 }
-
+.imageMenu {
+  display: none;
+  padding: 10px;
+  background: white;
+  border: 1px solid #ccc;
+}
+.toggleImage {
+  margin-top: 10px;
+}
 .question {
   margin-bottom: 15px;
   padding-left: 30px;
@@ -140,7 +148,7 @@ body {
 }
 
 #start-btn {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 8px 16px;
   text-align: center;

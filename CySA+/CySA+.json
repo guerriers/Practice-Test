@@ -2634,5 +2634,135 @@
             }
         ],
         "answer": "B"
+    },
+    {
+        "question": {
+            "text": "Which of the following is the best reason why organizations need operational security controls?",
+            "imageQ": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "To supplement areas that other controls cannot address"
+            },
+            {
+                "id": "B",
+                "text": "To limit physical access to areas that contain sensitive data"
+            },
+            {
+                "id": "C",
+                "text": "To assess compliance automatically against a secure baseline"
+            },
+            {
+                "id": "D",
+                "text": "To prevent disclosure by potential insider threats"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A company is aiming to test a new incident response plan. The management team has made it clear that the initial test should have no impact on the environment. The company has limited \n resources to support testing. Which of the following exercises would be the best approach?",
+            "imageQ": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Tabletop scenarios"
+            },
+            {
+                "id": "B",
+                "text": "Capture the flag"
+            },
+            {
+                "id": "C",
+                "text": "Red team vs. blue team"
+            },
+            {
+                "id": "D",
+                "text": "Unknown-environment penetration test"
+            }
+        ],
+        "answer": "A"
+    },
+    {
+        "question": {
+            "text": "A company is deploying new vulnerability scanning software to assess its systems. The current network is highly segmented, and the networking team wants to minimize the number of unique firewall rules. Which of the following scanning techniques would be most efficient to achieve the objective?",
+            "imageQ": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Deploy a cloud-based scanner and perform a network scan"
+            },
+            {
+                "id": "B",
+                "text": "Deploy agents on all systems to perform the scans"
+            },
+            {
+                "id": "C",
+                "text": "Deploy a central scanner and perform non-credentialed scans"
+            },
+            {
+                "id": "D",
+                "text": "Deploy a scanner sensor on every segment and perform credentialed scans"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "During a scan of a web server in the perimeter network, a vulnerability was identified that could be exploited over port 3389. The web server is protected by a WAF. Which of the following best represents the change to overall risk associated with this vulnerability?",
+            "imageQ": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "The risk would decrease because a web application firewall is in place"
+            },
+            {
+                "id": "B",
+                "text": "The risk would decrease because RDP is blocked by the firewall"
+            },
+            {
+                "id": "C",
+                "text": "The risk would not change because network firewalls are in use"
+            },
+            {
+                "id": "D",
+                "text": "The risk would increase because the host is external facing"
+            }
+        ],
+        "answer": "B"
+    },
+    {
+        "question": {
+            "text": "When investigating a potentially compromised host, an analyst observes that the process BGInfo.exe (PID 1024), a Sysinternals tool used to create desktop backgrounds containing host details, has been running for over two days. Which of the following activities will provide the best insight into this potentially malicious process, based on the anomalous behavior?",
+            "imageQ": "",
+            "footer": ""
+        },
+        "choices": [
+            {
+                "id": "A",
+                "text": "Activities taken by PID 1024"
+            },
+            {
+                "id": "B",
+                "text": "SMB network traffic related to the system process"
+            },
+            {
+                "id": "C",
+                "text": "Changes to system environment variables"
+            },
+            {
+                "id": "D",
+                "text": "Recent browser history of the primary user"
+            }
+        ],
+        "answer": "A"
     }
 ]

@@ -6,6 +6,7 @@
     <title>Practice Test</title>
     <link rel="stylesheet" href="practiceTest.css" />
   </head>
+
   <body>
     <h1>Practice Test (.json)</h1>
     <!-- <img src="./CySA+/images/question17.png" alt="test img" /> -->
@@ -59,6 +60,60 @@
       Dashboard
     </button>
 
+    <!-- Toggle Image Button -->
+    <button
+      class="toggleImage"
+      id="toggle-image-btn"
+      onclick="toggleImageMenu()"
+      style="display: none"
+    >
+      Image
+    </button>
+
+    <!-- Image Selection Menu (Hidden initially) -->
+    <div class="imageMenu" id="image-menu">
+      <button onclick="selectImage('')">Null</button>
+      <button onclick="selectImage('./CySA+/images/question3.png')">Q3</button>
+      <button onclick="selectImage('./CySA+/images/question6.png')">Q6</button>
+      <button onclick="selectImage('./CySA+/images/question17.png')">
+        Q17
+      </button>
+      <button onclick="selectImage('./CySA+/images/question28.png')">
+        Q28
+      </button>
+      <button onclick="selectImage('./CySA+/images/question30.png')">
+        Q30
+      </button>
+      <button onclick="selectImage('./CySA+/images/question41.png')">
+        Q41
+      </button>
+      <button onclick="selectImage('./CySA+/images/question77.png')">
+        Q77
+      </button>
+      <button onclick="selectImage('./CySA+/images/question78.png')">
+        Q78
+      </button>
+      <button onclick="selectImage('./CySA+/images/question82.png')">
+        Q82
+      </button>
+      <button onclick="selectImage('./CySA+/images/question84.png')">
+        Q84
+      </button>
+      <button onclick="selectImage('./CySA+/images/question88.png')">
+        Q88
+      </button>
+      <button onclick="selectImage('./CySA+/images/question90.png')">
+        Q90
+      </button>
+    </div>
+
+    <img
+      id="selected-image"
+      src=""
+      alt="Selected Image"
+      style="display: none; margin-top: 10px; max-width: 100%; height: auto"
+    />
+
     <div id="quiz-container"></div>
 
     <!-- Navigation Buttons -->
@@ -96,6 +151,18 @@
       let countdown;
       let timerTime;
 
+      function toggleImageMenu() {
+        const menu = document.getElementById("image-menu");
+        menu.style.display = menu.style.display === "none" ? "block" : "none";
+      }
+
+      function selectImage(src) {
+        const imgElement = document.getElementById("selected-image");
+        imgElement.src = src;
+        imgElement.style.display = "block";
+        // document.getElementById("image-menu").style.display = "none";
+      }
+
       function loadJSON() {
         const file = document.getElementById("upload").files[0];
         const reader = new FileReader();
@@ -116,15 +183,15 @@
             correct: item.answer,
           }));
 
-          // After the file is loaded, show the mode selection buttons
+          // After the file is loaded, show the mode selection buttons and the Image button
           document.getElementById("mode-select").style.display = "block";
           document.getElementById("file-import-section").style.display = "none"; // Hide the file import section
+          document.getElementById("toggle-image-btn").style.display = "block";
           isJSONLoaded = true;
         };
 
         reader.readAsText(file);
       }
-
       function selectMode(mode) {
         if (!isJSONLoaded) {
           alert("Please Import JSON before selecting a mode.");
@@ -137,7 +204,7 @@
         if (selectedMode === "Custom") {
           document.getElementById("custom-settings").style.display = "block";
         } else if (selectedMode === "Test") {
-          shuffleArray(questions); // Only shuffle if "shuffle Question" is "Yes"
+          // shuffleArray(questions); // Only shuffle if "shuffle Question" is "Yes"
           document.getElementById("reset-btn").style.display = "block";
           document.getElementById("toggle-dashboard-btn").style.display =
             "block";
@@ -165,7 +232,7 @@
         // Shuffle the entire list of questions
         const shuffledQuestions = shuffleArray([...questions]);
 
-        // Select the first `numQuestions` questions from the shuffled list
+        // Select the first numQuestions questions from the shuffled list
         let selectedQuestions = shuffledQuestions.slice(0, numQuestions);
 
         // Update the global questions array
@@ -217,12 +284,12 @@
         timerTime = timeLimit * 60; // Convert minutes to seconds
         countdown = setInterval(updateTimer, 1000);
 
-        // Show Dashboard and Reset buttons
+        // Show Dashboard, Reset, and Image buttons
         document.getElementById("reset-btn").style.display = "block";
         document.getElementById("toggle-dashboard-btn").style.display = "block";
+        document.getElementById("toggle-image-btn").style.display = "block";
         startQuiz();
       }
-
       function shuffleArray(array) {
         console.log("Shuffling array:", array);
         for (let i = array.length - 1; i > 0; i--) {
@@ -251,8 +318,10 @@
       function startQuiz() {
         loadQuestion(currentPage);
         updateDashboard();
-        // Show the navigation buttons
+        // Show the navigation buttons and the Image button
         document.getElementById("navigation-buttons").style.display = "block";
+        document.getElementById("toggle-dashboard-btn").style.display = "block";
+        document.getElementById("toggle-image-btn").style.display = "block";
       }
 
       function resetQuiz() {
@@ -316,10 +385,10 @@
           const choiceElem = document.createElement("div");
           choiceElem.innerHTML = `
       <input type="${isMultipleAnswer ? "checkbox" : "radio"}" 
-             name="question${page}" 
-             value="${key}" 
-             onchange="selectAnswer(${page}, '${key}', ${isMultipleAnswer})"
-             ${answers[page] && answers[page].includes(key) ? "checked" : ""}>
+        name="question${page}" 
+        value="${key}" 
+        onchange="selectAnswer(${page}, '${key}', ${isMultipleAnswer})"
+        ${answers[page] && answers[page].includes(key) ? "checked" : ""}>
       ${key}: ${formattedChoiceText}
     `;
           choicesElem.appendChild(choiceElem);
